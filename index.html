@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Duomenų analitikos esmė ir raida</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="title" data-background=images/title.jpg data-state="dim" >
+					<h1 style="color: white">Įvadas į duomenų analitiką</h1>
+					<small style="color: white">lekt. Šarūnas Kasnauskas, 2018</small>
+				</section>
+				 
+				<section>
+					<h2>Apie mane</h2>
+					<ul>
+						<li class="fragment">SISV programos magistras</li>
+						<li class="fragment">Verslo analitikos (BI) architektas @BalticAmadeus</li>	
+					</ul>
+					<small class="fragment" style="margin-top: 10%"><b>Bendraukime:</b> sarunas.kasnauskas@gmail.com</small>
+					<small class="fragment"><b>Bendraukime apie:</b> 
+							<span class="fragment">pasenusias technologijas,</span>
+							<span class="fragment">muzikos instrumentus,</span>
+							<span class="fragment">duomenų analitiką,..</span>
+					</small>
+				</section>
+				
+				<section data-background=#ffbe00>
+					<h1>Programa</h1>
+				</section>
+				<section>
+					<ul>
+						<li class="fragment">Duomenų analitikos esmė ir raida</li>
+						<li class="fragment">Duomenų tipai ir panaudojimo atvejai (<i>Žaliava</i>)</li>
+						<li class="fragment">Duomenų integravimas ir talpinimas</li>
+						<li class="fragment">Duomenų tyryba (<i>Data Mining</i>) ir kompiuterio mokymas (<i>Machine Learning</i>)</li>
+						<li class="fragment">Analitikos rezultatai</li>
+						<li class="fragment">Analitinė orgnanizacija</li>
+						<br>
+						<li class="fragment">Svečių paskaitos</li>
+						<li class="fragment">Atvejo ananlizė</li>
+					</ul>
+					
+				</section>
+				<section>
+						<h2>Vertinimo kriterijai:</h2>
+						<ul>
+							<li class="fragment">Egzaminas - x%</li>
+							<li class="fragment">Praktiniai užsiėmimai - x%</li>
+							<li class="fragment">Egzaminas - x%</li>
+						</ul>
+
+				</section>
+				
+			
+
+				<section data-background=images/government.jpg data-state="dim">
+					<h1 style="color: white">Verslo analitikos esmė ir raida</h1>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				mouseWheel: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/chart/Chart.min.js' },				
+					{ src: 'plugin/chart/csv2chart.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]				
+			});
+		</script>
+	</body>
+</html>
