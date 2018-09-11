@@ -48,6 +48,15 @@ html.dim .backgrounds {
   
 }
 
+.reveal .biglist {
+  font-size: .6em;
+}
+
+.reveal .biglist ul {
+  font-size: .7em;
+}
+
+
 /*********************************************
  * HEADERS
  *********************************************/
