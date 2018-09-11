@@ -804,6 +804,9 @@
 .fa-linkedin:before {
   content: "\f0e1";
 }
+.fa-email:before {
+  content: "\f0e0";
+}
 .fa-rotate-left:before,
 .fa-undo:before {
   content: "\f0e2";
