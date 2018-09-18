@@ -1,0 +1,349 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Duomenų šaltiniai</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="title" data-background=images/title2.png data-state="dim" >
+					<h1>Duomenų šaltiniai</h1>
+					<small >lekt. Šarūnas Kasnauskas, 2018</small>
+				</section>
+
+				<section>
+					<h2>Nuo duomenų iki išminties</h2>
+					<img class="stretch" src="images/data-wisdom.jpg">
+				</section>
+
+				<section>
+					<section>
+						<h2>Duomenų tipai</h2>
+						<div class="fragment">
+							<p>Struktūruoti duomenys (<i>Structured data</i>) - griežta schema</p>
+							<small>Reliacinės duomenų bazės, <i>ERP</i>, <i>CRM</i>,..</small>
+						</div>						
+						<div class="fragment">
+							<p>Pusiau struktūruoti duomenys (<i>Semi-structured data</i>) - schema vėliau</p>
+							<small>CSV, XML, JSON, HTTP, HTML,..</small>
+						</div>
+						<div class="fragment">
+							<p>Nestruktūruoti duomenys (<i>Unstructured data</i>) - jokios schemos</p>
+							<small>Tekstas, vaizdas, garsas,..</small>
+						</div>
+					</section>
+					<section>
+						<h2>Išoriniai/Vidiniai</h2>
+						<img class="stretch" src="images/data-matrix.png">
+					</section>
+					<section>
+						<h2>Talpinimo tendencijos</h2>
+							<img class="stretch" src="images/unstructured-time.jpg">
+					</section>
+					
+				</section>
+
+				<section data-background=images/mysql.jpg data-state="dim" >
+					<h2>Struktūruoti duomenys</h2>
+				</section>
+				<section>
+						<h2>Verslo valdymo sistemos</h2>
+						<img class="stretch" src="images/lob.png">		
+				</section>
+				<section>
+					<iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDI2NmM3ZDktYjg0Yi00ZWQ3LWIyMDktMDk0MjU2ZDJmMDY0IiwidCI6IjA4NTA4ZGMyLWVjMjktNDkyMi05NGQ5LWI3MGM4MWVmYzgwMSIsImMiOjh9" width="1280" height="650" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+				</section>
+				<section>
+					<section>
+						<h2>Reliacinės duomenų bazės</h2>
+						<img class="stretch" src="images/database-schema.png">
+					</section>
+					
+					<section>
+						<h2>SQL duomenų tipai</h2>
+						<img class="stretch" src="images/sql-data-types.png">	
+					</section>
+					<section>
+						<h2>Lentelių sujungimas</h2>
+						<p class="fragment"><b>Vidiniai sujungimai</b> (<i>INNER JOIN</i>): derinami tik susiję abiejų lentelių duomenys</p>
+						<p class="fragment"><b>Išoriniai sujungimai</b> (<i>OUTER JOIN</i>): tinkamai derinami visi susiję duomenys ir visi likę vienos lentelės duomenys</p>
+						<p class="fragment"><b>Visas išorinis sujungimas</b> (<i>FULL JOIN</i>): visi duomenys, derinami, kai tai įmanoma</p>
+						<p class="fragment"><b>Kryžminiai sujungimai</b> (<i>CROSS JOIN</i>): visi duomenys, derinami bet kokiu galimu būdu</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/joins.png">
+					</section>
+					<section>
+						<iframe class="stretch"  src="http://joins.spathon.com/"></iframe>
+					</section>
+				</section>
+								
+				
+				<section data-background="images/xml-json.png" data-state="dim">
+					<h2>Pusiau struktūruoti duomenys</h2>
+				</section>
+				<section>	
+					<section>
+						<h2>.csv</h2>
+						<p>Kableliais atskirtos reikšmės (<i>Comma separated values</i>)</p>
+						<pre><code data-trim>
+							paso_numeris, Vardas, Pavarde
+							MP123456, aaa, bbb
+							PK123456, ccc, ddd
+							PK123457, xxx, yyy
+						</code></pre>
+					</section>
+					<section>
+						<h2>.xml</h2>
+						<p>XML (<i>Extensible markup language</i>)</p>
+						<pre><code data-trim>
+						<asmenys>
+							<asmuo pasonumeris="MP123456">
+								<vardas>aaa</vardas>
+								<pavarde>bbb</pavarde>
+							</asmuo>
+							<asmuo pasonumeris="PK123456">
+								<vardas>ccc</vardas>
+								<pavarde>ddd</pavarde>
+							</asmuo>
+							<asmuo pasonumeris="PK123457">
+								<vardas>xxx</vardas>
+								<pavarde>yyy</pavarde>
+							</asmuo>
+						</asmenys>
+						</code></pre>
+						
+					</section>
+					<section>
+						<h2>.json</h2>
+						<p>JSON (<i>Javascript object notation</i>)</p>
+						<pre><code data-trim>
+							{
+							  "Asmenys":
+								  [
+									{
+										"Asmuo": {
+											"Paso_numeris":"MP123456",
+											"Vardas":"aaa",
+											"Pavarde":"bbb"
+								 		}
+									},
+									{
+										"Asmuo": {
+											"Paso_numeris":"PK123456",
+											"Vardas":"ccc",
+											"Pavarde":"ddd"
+										}
+									},
+									{
+										"Asmuo": {
+											"Paso_numeris":"PK123457",
+											"Vardas":"xxx",
+											"Pavarde":"yyy"
+										}
+									}
+								  ]
+							}
+						</code></pre>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>NoSQL - Ne tik SQL </h2>
+					</section>
+					
+					<section>
+						<h2>NoSQL pranašumai</h2>
+						<ul>
+							<li>Dokumentus kurtigalima iš karto neapibrėžus jų struktūros</li>
+							<li>Kiekvienas dokumentas gali turėti unikalią struktūrą</li>
+							<li>Vienos duomenų bazės sintaksė gali skirtis nuo kitos</li>
+							<li>Papildomus laukus galima pridėti bet kada</li>
+						</ul>
+					</section>
+					<section>
+						<h2>NoSQL duomenų bazių tipai</h2>
+						<p><i>Key-value</i></p>
+						<p><i>Column family</i></p>
+						<p><i>Graph DB</i></p>
+						<p><i>Document</i></p>
+					</section>
+					<section>
+						<h2>Key-value</h2>
+						<img class="stretch" src="images/key-value.png">
+					</section>
+					<section>
+						<h2>Column family</h2>
+						<img class="stretch" src="images/columnfamily.jpg">
+					</section>
+					<section>
+						<h2>Graph DB</h2>
+						<img class="stretch" src="images/graph-db.jpg">
+					</section>
+					<section>
+						<h2>Document</h2>
+						<img class="stretch" src="images/document-db.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>NoSQL prieš SQL</h2>
+						<img class="stretch" src="images/json-normalization.png">
+					</section>
+					<section>
+						<h2>Terminų atitikmenys</h2>
+						<img class="stretch" src="images/databse-terms.png">
+					</section>		
+					<section>
+						<h2>NoSQL užklausos</h2>
+						<img class="stretch" src="images/nosql-queries.png">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>HTML</h2>
+						<img class="stretch" src="images/html.png">
+					</section>
+					<section>
+						<h2>Interneto duomenų ištraukimas<i>Web scraping</i></h2>
+						<img class="stretch" src="images/scraping.jpg">
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>HTTP užklausos</h2>
+						<pre><code data-trim>
+								http://www.google-analytics.com/__utm.gif?utmwv=4&utmn
+								=769876874&utmhn=example.com&utmcs=ISO-8859-1&utmsr=
+								1280x1024&utmsc=32-bit&utmul=en-us&utmje=1&utmfl=9.0
+								%20%20r115&utmcn=1&utmdt=GATC012%20setting%20variables
+								&utmhid=2059107202&utmr=0&utmp=/auto/GATC012.html?
+								utm_source=www.gatc012.org&utm_campaign=campaign+gatc012
+								&utm_term=keywords+gatc012&utm_content=content+gatc012
+								&utm_medium=medium+gatc012&utmac=UA-30138-1&utmcc=__utma
+								%3D97315849.1774621898.1207701397.1207701397.1207701397.1%3B...   
+						</code></pre>
+					</section>
+					<section>
+						<h2>WWW analitika</h2>
+						<img class="stretch" src="images/ga.png">
+					</section>
+					<section>
+						<h2>Google analytics sekimo kodas</h2>
+						<pre><code data-trim>
+							<!-- Global Site Tag (gtag.js) - Google Analytics -->
+							<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+							<script>
+							window.dataLayer = window.dataLayer || [];
+							function gtag(){dataLayer.push(arguments);}
+							gtag('js', new Date());
+
+							gtag('config', 'GA_TRACKING_ID');
+							</script>
+
+						</code></pre>
+					</section>
+					<section>
+						<h2>Veikimo principas</h2>
+						<img class="stretch" src="images/ga-process.png">
+					</section>
+				</section>
+				
+				<section>
+					<section>
+						<h2>Nestruktūruoti duomenys</h2>
+					</section>
+					<section>
+						Tekstas
+						https://refactored.ai/track/data-science-II/courses/nlp.ipynb 
+					</section>
+					<section>
+						Socialainės medijų sentimentai
+					</section>
+					<section>
+						teksto paieška Elastic search
+					</section>
+					
+					<section>
+						Log Files http://www.jafsoft.com/searchengines/log_sample.html 
+					</section>
+					<section>
+						Audio įžanginė
+					</section>
+					<section>
+						Audio informacijos struktūra
+						https://www.analyticsvidhya.com/blog/2017/08/audio-voice-processing-deep-learning/ 
+						https://www.youtube.com/watch?v=u9FPqkuoEJ8 
+					</section>
+					<section>
+						MP3
+					</section>
+					<section>
+						Vaizdas
+					</section>
+					<section>
+						Vaizdo dekonstrukcija į pixelius
+						https://becominghuman.ai/image-data-pre-processing-for-neural-networks-498289068258
+					</section>
+					<section>
+						Features
+					</section>
+					<section>
+						Video
+						http://blog.qure.ai/notes/deep-learning-for-videos-action-recognition-review
+					</section>
+					<section>
+						<iframe class="stretch" src="https://experiments.withgoogle.com/collection/ai"></iframe>
+					</section>
+					
+					
+				</section>
+				
+				
+										
+								
+				
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				mouseWheel: false,
+				slideNumber: 'c',
+				history: true, 
+				pdfSeparateFragments: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]				
+			});
+		</script>
+	</body>
+</html>
