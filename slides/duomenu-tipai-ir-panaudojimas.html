@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Duomenų analitikos esmė ir raida</title>
+		<title>Duomenų tipai</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -38,36 +38,37 @@
 					<section>
 						<h2>Duomenų tipai</h2>
 						<div class="fragment">
-							<p>Struktūruoti duomenys (<i>Structured data</i>)</p>
+							<p>Struktūruoti duomenys (<i>Structured data</i>) - griežta schema</p>
 							<small>Reliacinės duomenų bazės, <i>ERP</i>, <i>CRM</i>,..</small>
 						</div>						
 						<div class="fragment">
-							<p>Pusiau struktūruoti duomenys (<i>Semi-structured data</i>)</p>
-							<small>XLS, XML, JSON, HTTP,..</small>
+							<p>Pusiau struktūruoti duomenys (<i>Semi-structured data</i>) - schema vėliau</p>
+							<small>CSV, XML, JSON, HTTP, HTML,..</small>
 						</div>
 						<div class="fragment">
-							<p>Nestruktūruoti duomenys (<i>Unstructured data</i>)</p>
+							<p>Nestruktūruoti duomenys (<i>Unstructured data</i>) - jokios schemos</p>
 							<small>Tekstas, vaizdas, garsas,..</small>
 						</div>
 					</section>
-					<section>
-						<h4>Ar nestruktūruoti duomenys tikrai neturi struktūros?</h4>
-						<p class="fragment"><strike>Struktūruoti</strike> - Tvirta struktūra</p>
-						<p class="fragment"><strike>Nestruktūruoti</strike> - Lansksti struktūra</p>
-					</section>
+					
 				</section>
 
 				<section data-background=images/mysql.jpg data-state="dim" >
 					<h2>Struktūruoti duomenys</h2>
 				</section>
-
+				<section>
+						<iframe frameborder="0" width="1200" height="675" src="https://app.powerbi.com/view?r=eyJrIjoiYmQ0Njg1MTMtYzExNi00OWNlLTk4MTUtYTdmZGNmNWJjOTBiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9"></iframe>
+				</section>
 				<section>
 					<section>
 						<h2>Reliacinės duomenų bazės</h2>
 						<img src="images/database-schema.png">
 					</section>
 					<section>	
-						<iframe width="840px" height="630px" src="https://youtube.com/embed/NvrpuBAMddw" allowfullscreen></iframe>
+						<iframe class="stretch" src="https://youtube.com/embed/NvrpuBAMddw" allowfullscreen></iframe>
+					</section>
+					<section>
+						data types?
 					</section>
 					<section>
 						<h2>Lentelių sujungimas</h2>
@@ -77,66 +78,101 @@
 						<p class="fragment"><b>Kryžminiai sujungimai</b> (<i>CROSS JOIN</i>): visi duomenys, derinami bet kokiu galimu būdu</p>
 					</section>
 					<section>
-						<img src="images/joins.png">
+						<img class="stretch" src="images/joins.png">
 					</section>
 					<section>
-						<iframe width="800px" height="600px" src="http://joins.spathon.com/"></iframe>
+						<iframe class="stretch"  src="http://joins.spathon.com/"></iframe>
 					</section>
 				</section>
 				<section>
-					<section>
-						<h2>Struktūruoti duomenys</h1>
-					</section>
-					<section>
-						Duomenų bazės
-					</section>
-					<section>
-							
-					</section>
-					<section>
-						Transakcinės duomenų bazės
-					</section>
-					<section>
-						ERP
-					</section>
-					<section>
-						CRM
+					<section data-background="images/xml-json.png" data-state="dim">
+						<h2>Pusiau struktūruoti duomenys</h2>
 					</section>
 					
+					<section>
+						Csv pvz.
+					</section>
+
+					<section>
+						XML
+					</section>
+					<section>
+						JSON
+					</section>
+					<section>
+						XML vs JSON vs CSV
+					</section>
+					<section>
+						NoSQL Idea
+					</section>
+					<section>
+						NoSQL vs SQL
+					</section>
+					<section>
+						NoSQL types
+					</section>
+					<section>
+						HTML 
+					</section>
+					<section>
+						Web scraping sturcture
+					</section>
+					<section>
+						Google search engine
+					</section>
+					<section>
+						HTTP requests
+					</section>
+					<section>
+						Google analytics pricniples
+					</section>
+					<section>
+						Google analytic slide 2
+					</section>
 				</section>
-				<section>
-					<section>
-						Pusiau struktūruoti duomenys
-					</section>
-					<section>
-						NoSQL
-					</section>
-					<section>
-						csv
-					</section>
-				</section>
+				
 				<section>
 					<section>
 						<h2>Nestruktūruoti duomenys</h2>
 					</section>
 					<section>
-						Web puslapiai
+						Tekstas
 					</section>
 					<section>
-						Socilainės medijos
+						Socialainės medijų sentimentai
 					</section>
+					<section>
+						teksto paieška Elastic search
+					</section>
+					
 					<section>
 						Log Files
 					</section>
 					<section>
-						Audio
+						Audio įžanginė
+					</section>
+					<section>
+						Audio informacijos struktūra
+					</section>
+					<section>
+						MP3
+					</section>
+					<section>
+						Vaizdas
+					</section>
+					<section>
+						Vaizdo dekonstrukcija į pixelius
+					</section>
+					<section>
+						Features
 					</section>
 					<section>
 						Video
 					</section>
 					<section>
-						WWW užklausos
+						<iframe class="stretch" src="https://experiments.withgoogle.com/collection/ai"></iframe>
 					</section>
+					
 					
 				</section>
 				
