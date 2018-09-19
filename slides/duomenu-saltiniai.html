@@ -43,7 +43,7 @@
 						</div>						
 						<div class="fragment">
 							<p>Pusiau struktūruoti duomenys (<i>Semi-structured data</i>) - schema vėliau</p>
-							<small>CSV, XML, JSON, HTTP, HTML,..</small>
+							<small>CSV, XML, JSON, HTML, HTTP,..</small>
 						</div>
 						<div class="fragment">
 							<p>Nestruktūruoti duomenys (<i>Unstructured data</i>) - jokios schemos</p>
@@ -51,12 +51,8 @@
 						</div>
 					</section>
 					<section>
-						<h2>Išoriniai/Vidiniai</h2>
+						<h2>Išoriniai/vidiniai šaltiniai</h2>
 						<img class="stretch" src="images/data-matrix.png">
-					</section>
-					<section>
-						<h2>Talpinimo tendencijos</h2>
-							<img class="stretch" src="images/unstructured-time.jpg">
 					</section>
 					
 				</section>
@@ -69,10 +65,11 @@
 						<img class="stretch" src="images/lob.png">		
 				</section>
 				<section>
-					<iframe src="https://app.powerbi.com/view?r=eyJrIjoiZDI2NmM3ZDktYjg0Yi00ZWQ3LWIyMDktMDk0MjU2ZDJmMDY0IiwidCI6IjA4NTA4ZGMyLWVjMjktNDkyMi05NGQ5LWI3MGM4MWVmYzgwMSIsImMiOjh9" width="1280" height="650" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+					<h2>Struktūruotų duomenų panaudojimas</h2>
+					<iframe class="stretch" src="https://app.powerbi.com/view?r=eyJrIjoiZDI2NmM3ZDktYjg0Yi00ZWQ3LWIyMDktMDk0MjU2ZDJmMDY0IiwidCI6IjA4NTA4ZGMyLWVjMjktNDkyMi05NGQ5LWI3MGM4MWVmYzgwMSIsImMiOjh9" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 				</section>
 				<section>
-					<section>
+					<section data-background="#005874">
 						<h2>Reliacinės duomenų bazės</h2>
 						<img class="stretch" src="images/database-schema.png">
 					</section>
@@ -104,7 +101,7 @@
 					<section>
 						<h2>.csv</h2>
 						<p>Kableliais atskirtos reikšmės (<i>Comma separated values</i>)</p>
-						<pre><code data-trim>
+						<pre class="fragment"><code data-trim>
 							paso_numeris, Vardas, Pavarde
 							MP123456, aaa, bbb
 							PK123456, ccc, ddd
@@ -114,7 +111,7 @@
 					<section>
 						<h2>.xml</h2>
 						<p>XML (<i>Extensible markup language</i>)</p>
-						<pre><code data-trim>
+						<pre class="fragment"><code data-trim>
 						<asmenys>
 							<asmuo pasonumeris="MP123456">
 								<vardas>aaa</vardas>
@@ -135,7 +132,7 @@
 					<section>
 						<h2>.json</h2>
 						<p>JSON (<i>Javascript object notation</i>)</p>
-						<pre><code data-trim>
+						<pre class="fragment"><code data-trim>
 							{
 							  "Asmenys":
 								  [
@@ -166,25 +163,28 @@
 					</section>
 				</section>
 				<section>
-					<section>
+					<section data-background="#FFBE00">
 						<h2>NoSQL - Ne tik SQL </h2>
+					</section>
+					<section>
+						<iframe class="stretch" src="https://demo.elastic.co/app/kibana#/visualize/edit/ed78a660-53a0-11e8-acbd-0be0ad9d822b?embed=true&_g=()"></iframe>
 					</section>
 					
 					<section>
 						<h2>NoSQL pranašumai</h2>
 						<ul>
-							<li>Dokumentus kurtigalima iš karto neapibrėžus jų struktūros</li>
-							<li>Kiekvienas dokumentas gali turėti unikalią struktūrą</li>
-							<li>Vienos duomenų bazės sintaksė gali skirtis nuo kitos</li>
-							<li>Papildomus laukus galima pridėti bet kada</li>
+							<li class="fragment">Dokumentus kurti galima iš karto neapibrėžus jų struktūros</li>
+							<li class="fragment">Kiekvienas dokumentas gali turėti unikalią struktūrą</li>
+							<li class="fragment">Vienos duomenų bazės sintaksė gali skirtis nuo kitos</li>
+							<li class="fragment">Papildomus laukus galima pridėti bet kada</li>
 						</ul>
 					</section>
 					<section>
 						<h2>NoSQL duomenų bazių tipai</h2>
-						<p><i>Key-value</i></p>
-						<p><i>Column family</i></p>
-						<p><i>Graph DB</i></p>
-						<p><i>Document</i></p>
+						<p class="fragment"><i>Key-value</i></p>
+						<p class="fragment"><i>Column family</i></p>
+						<p class="fragment"><i>Graph DB</i></p>
+						<p class="fragment"><i>Document</i></p>
 					</section>
 					<section>
 						<h2>Key-value</h2>
@@ -223,7 +223,7 @@
 						<img class="stretch" src="images/html.png">
 					</section>
 					<section>
-						<h2>Interneto duomenų ištraukimas<i>Web scraping</i></h2>
+						<h2>Interneto duomenų ištraukimas (<i>Web scraping</i>)</h2>
 						<img class="stretch" src="images/scraping.jpg">
 					</section>
 				</section>
@@ -265,58 +265,95 @@
 						<h2>Veikimo principas</h2>
 						<img class="stretch" src="images/ga-process.png">
 					</section>
-					<section>
-						Log analizė?
-					</section>
+
 				</section>
 				
+				
+				<section data-background="images/unstructured.jpg" data-state="dim">
+					<h2 style="color: white">Nestruktūruoti duomenys</h2>
+				</section>
 				<section>
-					<section>
-						<h2>Nestruktūruoti duomenys</h2>
+					<section data-background="#357266">
+						<h2>Tekstas</h2>
+						<img class="stretch" src="images/trump-tweets.png">
 					</section>
 					<section>
-						Tekstas
-						https://refactored.ai/track/data-science-II/courses/nlp.ipynb 
+						<h2>Natūralios kalbos apdorojimas (<i>NLP</i>)</h2>
+						<img class="stretch" src="images/nlp-flow.png">
+					</section> 
+					<section>
+						<h2>NLP procesas (Python)</h2>
+						<pre class="stretch"><code data-trim>
+							from bs4 import BeautifulSoup 
+							import urllib.request 
+							import nltk 
+							from nltk.corpus import stopwords 
+							
+							response = urllib.request.urlopen('http://www.vu.lt/en/') 
+							html = response.read() 
+							soup = BeautifulSoup(html,"html5lib") 
+							for script in soup(["script", "style"]):
+								script.extract()
+							text = soup.get_text(strip=True) 
+							tokens = [t for t in text.split()] 
+							clean_tokens = tokens[:] 
+							sr = stopwords.words('english') 
+							for token in tokens: 
+								if token in stopwords.words('english'): 
+									clean_tokens.remove(token) 
+							freq = nltk.FreqDist(clean_tokens)   
+								
+							freq.plot(20,cumulative=False)
+						</code></pre>
 					</section>
 					<section>
-						Socialainės medijų sentimentai
+						<img class="stretch" src="images/vu-nlp.png">
+					</section>
+				</section>
+				<section>
+					<section data-background="#FF934F">
+						<h2>Garsas</h2>
+						<img class="stretch" src="images/time-freq.png">
 					</section>
 					<section>
-						teksto paieška Elastic search
-					</section>
-					
-					<section>
-						Log Files http://www.jafsoft.com/searchengines/log_sample.html 
+							<iframe class="stretch" src="https://www.youtube.com/embed/JvbHu_bVa_g?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</section>
 					<section>
-						Audio įžanginė
+						<h2>Garso apdorojimas (Python)</h2>
+						<pre class="stretch"><code data-trim>
+							from scipy.io.wavfile import read
+							import matplotlib.pyplot as plt
+							
+							# read audio samples
+							input_data = read("flute.wav")
+							audio = input_data[1]
+							# plot the first 1024 samples
+							plt.plot(audio[0:1024])
+							# label the axes
+							plt.ylabel("Amplitude")
+							plt.xlabel("Time (samples)")
+							# set the title
+							plt.title("Flute Sample")
+							# display the plot
+							plt.show()
+						</code></pre>
 					</section>
 					<section>
-						Audio informacijos struktūra
-						https://www.analyticsvidhya.com/blog/2017/08/audio-voice-processing-deep-learning/ 
-						https://www.youtube.com/watch?v=u9FPqkuoEJ8 
+							<img class="stretch" src="images/flute.png">
+					</section>
+				</section>
+				<section>	
+					<section data-background="#E0F2E9">
+						<h2>Vaizdas</h2>
+						<img class="stretch" src="images/rgb.gif">
 					</section>
 					<section>
-						MP3
+							<iframe class="stretch" src="https://docs.google.com/spreadsheets/d/1W7vYXcJuNvbkWsu7BQOGk5-dhC01AbKd--qiZvFTvjg/edit?usp=sharing"></iframe>
 					</section>
 					<section>
-						Vaizdas
-					</section>
-					<section>
-						Vaizdo dekonstrukcija į pixelius
-						https://becominghuman.ai/image-data-pre-processing-for-neural-networks-498289068258
-					</section>
-					<section>
-						Features
-					</section>
-					<section>
-						Video
-						http://blog.qure.ai/notes/deep-learning-for-videos-action-recognition-review
-					</section>
-					<section>
+						<h2>Vaizdo duomenų panaudojimas</h2>
 						<iframe class="stretch" src="https://experiments.withgoogle.com/collection/ai"></iframe>
-					</section>
-					
+					</section>		
 					
 				</section>
 				
