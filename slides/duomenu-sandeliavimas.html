@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Duomenų sandėliavimas</title>
+		<title>Mazu duomenų sandeliavimas</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/white.css">
@@ -25,7 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section id="title" data-background=images/title-3.jpg data-state="dim" >
-					<h1>Duomenų sandėliavimas</h1>
+					<h1><q>Mažų</q> duomenų sandėliavimas</h1>
 					<small >lekt. Šarūnas Kasnauskas, 2018</small>
 				</section>
 				<section>
@@ -81,26 +81,26 @@
 						<img class="stretch" src="images/oltp-olap.png">
 					</section>
 					<section>
-						Normalinės formos
+						<h3>Normalicija</h3>
+						<p>Duomenų transformacija į natūraliai sugrupuotą ir gerai
+							suformuotą formą taip, kad vienas faktas būtų vienoje vietoje ir ryšiai tarp faktų būtų
+							tvarkingi</p>
+						<h3>Denormalizacija</h3>
+						<p>Strategija naudojama anksčiau normalizuotų duomenų bazių nuskaitymo greitaveikai pagerinti</p>
 					</section>
 					<section>
-						1NF
+						<img class="stretch" src="images/denomalization.jpg">
 					</section>
+					
 					<section>
-						2NF
-					</section>
-					<section>
-						3NF
-					</section>
-					<section>
-						<table style="font-size: 0.6em">
+						<table style="font-size: 0.7em">
 							<tr>
 								<th>OLTP</th>
 								<th>OLAP</th>
 							</tr>
 							<tr>
 								<td>Dabartiniai duomenys</td>
-								<td>Dabartiniai+istoriniai duomenys</td>
+								<td>Dabartiniai ir istoriniai duomenys</td>
 							</tr>
 							<tr>
 								<td>Trumpos užklausų vykdymo transakcijos</td>
@@ -108,15 +108,15 @@
 							</tr>
 							<tr>
 								<td>On-line update/insert/delete komandos</td>
-								<td>Foninis update/insert/delete komandos</td>
+								<td>Foninės update/insert/delete komandos</td>
 							</tr>
 							<tr>
 								<td>DB normalizacija skatintina</td>
 								<td>DB denormalizacija skatintina</td>
 							</tr>
 							<tr>
-								<td>Mažos apimties užklausos</td>
-								<td>Didelės apimties užklausos</td>
+								<td>Dideli užklausų kiekiai</td>
+								<td>Maži užklausų kiekiai</td>
 							</tr>
 							<tr>
 								<td>Transakcijos atstatymas yra būtinas</td>
@@ -133,43 +133,88 @@
 						</table>
 					</section>
 				</section>
+				<section>
+					<section data-background="#FFBE00">
+						<h2>Dimensinis modeliavimas</h2>
+					</section>
+					<section>
+						<h2>Duomenų sandėlio schemos</h2>
+						<p>Žvaigždės schema (<i>Star schema</i>)</p>
+						<p>Snaigės schema (<i>Snowflake schema</i>)</p>
+						<p>Žvaigždyno schema (<i>Galaxy schema</i>)</p>
+					</section>
+					<section>
+						<h2>Žvaigždės schema</h2>
+						<img class="stretch" src="images/star2.jpg">
+					</section>
+					<section>
+						Faktai
+						<img src="images/fact.jpg">
+					</section>
+					<section>
+						faktai2
+					</section>
+					<section>
+						Dimensijos
+					</section>
+					<section>
+						Dimensijos 2
+					</section>
+					<section>
+						<h2>Žvaigždės schemos ypatybės</h2>
+						<ul>
+							<li>Kiekviena dimensija atvaizduojama tik vienoje lentelėje</li>
+							<li>Dimensijų lentelėje talpinami atributai</li>
+							<li>Dimensijos lentelę su faktų lentele jungia išorinis raktas</li>
+							<li>Dimensijų lentelės nesujungtos tarpusavyje</li>
+							<li>Faktų lentelėje talpinami matai ir raktai</li>
+							<li>Dimensijų lentelės nėra normalizuotos</li>
+						</ul>
+
+					</section>
+					<section>
+						<h2>Snaigės schema</h2>
+						<img class="stretch" src="images/snowflake.jpg">
+					</section>
+					<section>
+						<h2>Snaigės schemos ypatybės</h2>
+						<ul>
+							<li>Naudojama hierarchinė stuktūra bei normalizuotos lentelės</li>
+							<li>Mažesnis kietojo disko vietos naudojimas</li>
+							<li>Lengviau įgyvendinti dimensijų schemos pakeitimus</li>
+							<li>Dėl didesnio lentelių kiekio prastesnė užklausų greitaveika</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Žvaigždyno schema</h2>
+						<img class="stretch" src="images/galaxy.jpg">
+					</section>	
+					<section>
+						<h2>Žvaigždyno schemos ypatybės</h2>
+						<ul>
+							<li>Galimos kelios faktų lentelės</li>
+							<li>Daug komplikuotesnis schemos architektūrinis dizainas</li>
+							<li>Dimensijos gali jungtis su keliomis faktų lentelėmis</li>
+							<li>Kai kurie verslo analitikos įrankiai gali nepalaikyti tokios schemos</li>
+						</ul>
+
+					</section>			
+					<section>
+						<img class="stretch" src="images/kimball-vs-inmon.jpg">
+					</section>
+				</section>
 
 
-				<section>
-					<h2>Normalizavimas</h2>
-				</section>
-				<section>
-					<h2>De-normalizavimas</h2>
-				</section>
-				<section>
-					Sandėlio koncepcija
-				</section>
-				<section>
-					Olap vs oltp
-				</section>
+				
 				<section>
 					OLAP kubas
+					<img src="images/olap1.jpg">
 				</section>
 				<section>
 					Sandėlio metodologijos
 				</section>
 				<section>
 					Kimball
-				</section>
-				<section>
-					Žvaigždė
-				</section>
-				<section>
-					Snaigė
-				</section>
-				<section>
-					Žvaigždynas
-				</section>
-				<section>
-					Faktai
-				</section>
-				<section>
-					Dimensijos
 				</section>
 				<section>
 					Duomenų vitrina
