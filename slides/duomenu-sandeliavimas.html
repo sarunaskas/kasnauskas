@@ -33,15 +33,16 @@
 					<p>Duomenų sandėlis, tai istorinių duomenų, surinktų ir sugrupuotų pagal tam tikrą tematiką, saugykla prieinama analitinio apdorojimo veikloms</p>
 				</section>
 				<section>
-						<img class="stretch" src="images/star-schema.png">
+						<img class="stretch" src="images/dwh.jpg">
 				</section>
 				<section>
-					<h2>Ištraukt, transformuok, įdėk (<i>Extract, Transform and Load - ETL</i>)</h2>
+					<h2>Ištrauk, transformuok, įdėk (<i>Extract, Transform and Load - ETL</i>)</h2>
 					<p>ETL, tai procesas leidžiantis ištraukti duomenis iš duomenų šaltinių, juos išvalyti bei transformuoti ir užkrauti į kitas duomenų bazes</p>
 				</section>		
 				<section>
 					<img class="stretch" src="images/traditional-etl.png">
 				</section>
+
 				<section>
 					<section data-background="#E0F2E9">
 						<h2>Motyvacija</h2>
@@ -49,21 +50,20 @@
 					<section>
 						<h2>Verslo problemos</h2>
 						<ul>
-							<li><q>Renkame krūvas duomenų, bet jų napasiekiame</q></li>
-							<li><q>Norime pjaustyti duomenis visokiais būdais</q></li>
-							<li><q>Verslo žmonėms reikalinga paprasta duomenų prieiga</q></li>
-							<li><q>Tiesiog parodykite kas svarbu</q></li>
-							<li><q>Ištisus susirinkimus praleidžaime besiginčydami, kas turi teisingus skaičius vietoj to, kad priimtume sprendimus</q></li>
-							<li><q>Norime, kad žmonės naudotų faktinę informaciją paremti savo sprendimus</q></li>
+							<li class="fragment"><q>Renkame krūvas duomenų, bet jų napasiekiame</q></li>
+							<li class="fragment"><q>Norime dalinti, pjaustyti duomenis visokiais būdais</q></li>
+							<li class="fragment"><q>Verslo žmonėms reikalinga paprasta duomenų prieiga</q></li>
+							<li class="fragment"><q>Ištisus susirinkimus praleidžaime besiginčydami, kas turi teisingus skaičius vietoj to, kad priimtume sprendimus</q></li>
+							<li class="fragment"><q>Norime, kad žmonės naudotų faktinę informaciją paremdami savo sprendimus</q></li>
 						</ul>
 					</section>
 					<section>
 						<h2>Verslo reikalavimai</h2>
 						<ul>
-							<li>Duomenų sandėliavimo sistema turi informaciją padaryti lengvai pasiekiama</li>
-							<li>Duomenų sandėliavimo sistema turi prisitaikyti prie pokyčių</li>
-							<li>Duomenų sandėliavimo sistema turi apsaugoti informacijos išteklius</li>
-							<li>Verslas turi priimti duomenų sandeliavimo sistemą norint ją laikyti sėkminga</li>
+							<li class="fragment">Duomenų sandėliavimo sistema turi informaciją padaryti lengvai pasiekiamą</li>
+							<li class="fragment">Duomenų sandėliavimo sistema turi prisitaikyti prie pokyčių</li>
+							<li class="fragment">Duomenų sandėliavimo sistema turi apsaugoti informacijos išteklius</li>
+							<li class="fragment">Verslas turi priimti duomenų sandeliavimo sistemą norint ją laikyti sėkminga</li>
 						</ul>
 					</section>
 				</section>
@@ -72,21 +72,21 @@
 						<h2>Duomenų sandėlis prieš duomenų bazę</h2>
 					</section>
 					<section>
-						<h3>OLTP - On-line transaction processing</h3>
-						<p>Daug, trumpų užklausų - INSERT, UPDATE, DELETE</p>
-						<h3>OLAP - On-line analytical processing</h3>
-						<p>Lėtos, masyvios užklausos - SELECT</p>
+						<h3 class="fragment">OLTP - On-line transaction processing</h3>
+						<p class="fragment">Daug, trumpų užklausų - INSERT, UPDATE, DELETE</p>
+						<h3 class="fragment">OLAP - On-line analytical processing</h3>
+						<p class="fragment">Lėtos, masyvios užklausos - SELECT</p>
 					</section>
 					<section>
 						<img class="stretch" src="images/oltp-olap.png">
 					</section>
 					<section>
-						<h3>Normalicija</h3>
-						<p>Duomenų transformacija į natūraliai sugrupuotą ir gerai
+						<h3 class="fragment">Normalicija</h3>
+						<p class="fragment">Duomenų transformacija į natūraliai sugrupuotą ir gerai
 							suformuotą formą taip, kad vienas faktas būtų vienoje vietoje ir ryšiai tarp faktų būtų
 							tvarkingi</p>
-						<h3>Denormalizacija</h3>
-						<p>Strategija naudojama anksčiau normalizuotų duomenų bazių nuskaitymo greitaveikai pagerinti</p>
+						<h3 class="fragment">Denormalizacija</h3>
+						<p class="fragment">Strategija naudojama anksčiau normalizuotų duomenų bazių nuskaitymo greitaveikai pagerinti</p>
 					</section>
 					<section>
 						<img class="stretch" src="images/denomalization.jpg">
@@ -133,26 +133,114 @@
 						</table>
 					</section>
 				</section>
-				<section>
-					Istorija
-				</section>
-				<section>
-					Sudedamosios dalys: ETL, duomenų saugykla, vitrina
-				</section>
-				<section>
-					Inmon
-				</section>
-				<section>
-					Kimball
+
+				<section >
+					<section data-background="#005874">
+						<h2>Duomenų sandėlio kūrimas</h2>
+					</section>
+
+					<section>
+						<h3>Bill Inmon prieš Ralph Kimball</h3>
+						<img width=300px src="images/inmon-photo.jpg">
+						<span>vs</span>
+						<img width=300px src="images/kimball-photo.jpg">
+					</section>
+					<section>
+						<h2>Du pagrindiniai modeliai</h2>
+						<p class="fragment">Inmon - iš viršaus į apačią (<i>Top-down</i>)</p>
+						<p class="fragment">Kimball - iš apačios į viršų (<i>Bottom-up</i>)</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/inmon.jpg">
+					</section>
+					<section>
+						<img class="stretch" src="images/kimball.jpg">
+					</section>
+					<section>
+						<img class="stretch" src="images/bottom-top.png">
+					</section>
+
+					<section>
+
+						<table style="font-size: 0.8em">
+							<tr>
+								<th></th>
+								<th>Inmon</th>
+								<th>Kimball</th>
+							</tr>
+							<tr>
+								<th>Poreikis</th>	
+								<td>Ilgesnis laikotarpis</td>
+								<td>Nedelsiant</td>
+							</tr>
+							<tr>
+								<th>Varomoji jėga</th>
+								<td>Įmonė</td>
+								<td>Departamentai</td>
+							</tr>
+							<tr>
+								<th>Biudžetas</th>
+								<td>Didelis</td>
+								<td>Mažas</td>
+							</tr>
+							<tr>
+								<th>Reikalavimai</th>
+								<td>Stabilūs</td>
+								<td>Besikeičiantys</td>
+							</tr>
+							<tr>
+								<th>Duomenų šaltiniai</th>
+								<td>Besikeičiantys</td>
+								<td>Stabilūs</td>
+							</tr>
+							<tr>
+								<th>Pradiniai kaštai</th>
+								<td>Didesni</td>
+								<td>Mažesni</td>
+							</tr>
+
+						</table>
+					</section>
 				</section>
 
-				<section>
-					Inmon vs kimball
-					<img class="stretch" src="images/kimball-vs-inmon.jpg">
-				</section>
+
 				<section>
 					<section data-background="#FFBE00">
 						<h2>Dimensinis modeliavimas</h2>
+					</section>
+					<section>
+						<h2>Faktų lentelės</h2>
+						<img class="stretch" src="images/fact.jpg">
+					</section>
+					<section>
+						<h2>Faktų lentelės</h2>
+						<ul>
+							<li class="fragment">Kiekviena eilutė - vienas pamatavimo įvykis</li>
+							<li class="fragment">Kiekviena eilutė tam tikro vienodo detalumo lygio</li>
+							<li class="fragment">Dažniausiai, išorinių raktų ir skaitinių reikšmių aibė</li>
+							<li class="fragment">Didelis įrašų (eilučių) kiekis</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Dimensijų lentelės</h2>
+						<img class="stretch" src="images/dimension.jpg">
+					</section>
+					<section>
+						<h2>Dimensijų lentelės</h2>
+						<ul>
+							<li class="fragment">Suteikia kontekstą faktų lentelėms (<i>Kas? Kur? Kada? Kaip? Kodėl?</i>)</li>
+							<li class="fragment">Paprastai didelis stulpelių (atributų) kiekis</li>
+							<li class="fragment">Konkretus pirminis raktas kiekvienai dimensijai</li>
+							<li class="fragment">Dažniausiai mažas eilučių kiekis</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Lėtai besikeičiančios dimenijos (<i>Slowly changing dimensions</i>)</h2>
+						<img class="stretch" src="images/slowly-changing-dimensions.png">
+					</section>
+					<section>
+						<h2>SCD tipai</h2>
+						<img class="stretch" src="images/scd-types.png">
 					</section>
 					<section>
 						<h2>Duomenų sandėlio schemos</h2>
@@ -164,30 +252,16 @@
 						<h2>Žvaigždės schema</h2>
 						<img class="stretch" src="images/star2.jpg">
 					</section>
-					<section>
-						Faktai
-						<img src="images/fact.jpg">
-					</section>
-					<section>
-						faktai2
-					</section>
-					<section>
-						Dimensijos
-					</section>
-					<section>
-						Dimensijos 2
-					</section>
+
 					<section>
 						<h2>Žvaigždės schemos ypatybės</h2>
 						<ul>
-							<li>Kiekviena dimensija atvaizduojama tik vienoje lentelėje</li>
-							<li>Dimensijų lentelėje talpinami atributai</li>
-							<li>Dimensijos lentelę su faktų lentele jungia išorinis raktas</li>
-							<li>Dimensijų lentelės nesujungtos tarpusavyje</li>
-							<li>Faktų lentelėje talpinami matai ir raktai</li>
-							<li>Dimensijų lentelės nėra normalizuotos</li>
+							<li class="fragment">Kiekviena dimensija atvaizduojama tik vienoje lentelėje</li>
+							<li class="fragment">Dimensijų lentelėje talpinami atributai</li>
+							<li class="fragment">Dimensijos lentelę su faktų lentele jungia išorinis raktas</li>
+							<li class="fragment">Dimensijų lentelės nesujungtos tarpusavyje</li>
+							<li class="fragment">Dimensijų lentelės nėra normalizuotos</li>
 						</ul>
-
 					</section>
 					<section>
 						<h2>Snaigės schema</h2>
@@ -196,10 +270,10 @@
 					<section>
 						<h2>Snaigės schemos ypatybės</h2>
 						<ul>
-							<li>Naudojama hierarchinė stuktūra bei normalizuotos lentelės</li>
-							<li>Mažesnis kietojo disko vietos naudojimas</li>
-							<li>Lengviau įgyvendinti dimensijų schemos pakeitimus</li>
-							<li>Dėl didesnio lentelių kiekio prastesnė užklausų greitaveika</li>
+							<li class="fragment">Naudojama hierarchinė stuktūra bei normalizuotos lentelės</li>
+							<li class="fragment">Mažesnis kietojo disko vietos naudojimas</li>
+							<li class="fragment">Lengviau įgyvendinti dimensijų schemos pakeitimus</li>
+							<li class="fragment">Dėl didesnio lentelių kiekio prastesnė užklausų greitaveika</li>
 						</ul>
 					</section>
 					<section>
@@ -209,30 +283,77 @@
 					<section>
 						<h2>Žvaigždyno schemos ypatybės</h2>
 						<ul>
-							<li>Galimos kelios faktų lentelės</li>
-							<li>Daug komplikuotesnis schemos architektūrinis dizainas</li>
-							<li>Dimensijos gali jungtis su keliomis faktų lentelėmis</li>
-							<li>Kai kurie verslo analitikos įrankiai gali nepalaikyti tokios schemos</li>
+							<li class="fragment">Galimos kelios faktų lentelės</li>
+							<li class="fragment">Daug komplikuotesnis schemos architektūrinis dizainas</li>
+							<li class="fragment">Dimensijos gali jungtis su keliomis faktų lentelėmis</li>
+							<li class="fragment">Kai kurie verslo analitikos įrankiai gali nepalaikyti tokios schemos</li>
 						</ul>
+					</section>
+					<section>
+						<h2>Multidimensinis duomenų kubas (<i>OLAP cube</i>)</h2>
+						<img class="stretch" src="images/olapcube.png">
+					</section>
+					<section>
+						<h2>Duomenų kubas</h2>
+						<p class="fragment">Tai multidimensinė lentelė - dimensijų ir faktų lentelių junginys</p>
+						<p class="fragment">Duomenų kubai kuriami ant minėtų schemų siekiant pagerinti užklausų greitaveiką - agregavimų, sumavimų skaičiavimus</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/olap1.jpg">
+					</section>
+					<section>
+						<h2>Duomenų kubo operacijos</h2>
+						<ul>
+							<li class="fragment">Paversti - <i>Pivot</i></li>
+							<li class="fragment">Eiti gylyn - <i>Drill-down</i></li>
+							<li class="fragment">Eiti į viršų - <i>Roll-up</i></li>
+							<li class="fragment">Padalinti - <i>Slice</i></li>
+							<li class="fragment">Projektuoti - <i>Dice</i></li>
+						</ul>
+					</section>
+					<section>
+						<img class="stretch" src="images/olap-op.png">	
+					</section>
 
-					</section>			
+
 
 				</section>
-
-
-				
 				<section>
-					OLAP kubas
-					<img src="images/olap1.jpg">
+					<section data-background="#FF934F">
+						<h2>Įrankiai</h2>
+					</section>
+					<section>
+						<h2>ETL įrankiai</h2>
+						<img class="stretch" src="images/etl-tools.png">
+					</section>
+					<section>
+						<h2>ETL pavyzdys</h2>
+						<img class="stretch" src="images/ssis.png">
+					</section>
+					<section>
+						<h2>Kubų įrankiai</h2>
+						<ul>
+							<li>Oracle Hyperion Essbase</li>
+							<li>Teradata OLAP</li>
+							<li>Microsoft Analysis Services (SSAS)</li>
+							<li>SAP NetWeaver Business Warehouse</li>
+							<li>Microsoft Power Pivot</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Kubų kūrimo pavyzdys</h2>
+						<img class="stretch" src="images/ssas.png">
+					</section>
 				</section>
 				<section>
-					Sandėlio metodologijos
+					<p class="fragment">Struktūruoti <q>maži</q> duomenys?</p> 
+					<p class="fragment" style="color: green">Duomenų sandėliai ✔</p>
 				</section>
 				<section>
-					Kimball
+					<p><span class="fragment">Nestruktūruoti</span><span class="fragment">, pusiau struktūruoti</span><span class="fragment">, dideli duomenys?</span></p>
+					<h2 class="fragment">Duomenų ežerai</h2>
 				</section>
 
-				
 			</div>
 		</div>
 
