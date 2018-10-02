@@ -81,6 +81,7 @@ It is a data scientist's favorite hunting ground. He gets to access the data sto
 					<section>
 							https://www.xplenty.com/blog/etl-vs-elt/
 					</section>
+				
 				<section>
 					Big data storage
 				</section>
@@ -95,33 +96,95 @@ It is a data scientist's favorite hunting ground. He gets to access the data sto
 				</section>
 				<section>
 					Replication
+					Replication stores multiple copies of a dataset, known as replicas, on multiple nodes (Figure 5.7). Replication provides scalability and availability due to the fact that the same data is replicated on various nodes. Fault tolerance is also achieved since data redundancy ensures that data is not lost when an individual node fails. There are two different methods that are used to implement replication:
+• master-slave
+• peer-to-peer
 				</section>
 				<section>
-					Master-slave
+					CAP theorem
+					The Consistency, Availability, and Partition tolerance (CAP) theorem, also known as Brewer’s theorem, expresses a triple constraint related to distributed database systems. It states that a distributed database system, running on a cluster, can only provide two of the following three properties:
+• Consistency – A read from any node results in the same data across multiple nodes (Figure 5.15).
+Availability – A read/write request will always be acknowledged in the form of a success or a failure (Figure 5.16).
+Partition tolerance – The database system can tolerate communication outages that split the cluster into multiple silos and can still service read/write requests (Figure 5.16).
 				</section>
 				<section>
 					Big data processing
 				</section>
 				<section>
-					paralel, distributed
+					paralel,
+					Parallel data processing involves the simultaneous execution of multiple sub-tasks that collectively comprise a larger task. The goal is to reduce the execution time by dividing a single larger task into multiple smaller tasks that run concurrently.
+Although parallel data processing can be achieved through multiple networked machines, it is more typically achieved within the confines of a single machine with multiple processors or cores, as shown in Figure 6.1.
+
+				</section>
+				<section>
+					distributed
+					Distributed data processing is closely related to parallel data processing in that the same principle of “divide-and-conquer” is applied. However, distributed data processing is always achieved through physically separate machines that are networked together as a cluster. In Figure 6.2, a task is divided into three sub-tasks that are then executed on three different machines sharing one physical switch.
 				</section>
 				<section>
 					Hadoop
+					Hadoop is an open-source framework for large-scale data storage and data processing that is compatible with commodity hardware. The Hadoop framework has established itself as a de facto industry platform for contemporary Big Data solutions. It can be used as an ETL engine or as an analytics engine for processing large amounts of structured, semi-structured and unstructured data. From an analysis perspective, Hadoop implements the MapReduce processing framework. Figure 6.3 illustrates some of Hadoop’s features.
 				</section>
 				<section>
-					HDFS
+					processing workload
+					A processing workload in Big Data is defined as the amount and nature of data that is processed within a certain amount of time. Workloads are usually divided into two types:
+• batch
+• transactional
 				</section>
+				<section>
+					batch vs real-time
+				</section>
+				<section>
+					Batch
+					Batch processing, also known as offline processing, involves processing data in batches and usually imposes delays, which in turn results in high-latency responses. Batch workloads typically involve large quantities of data with sequential read/writes and comprise of groups of read or write queries.
+Queries can be complex and involve multiple joins. OLAP systems commonly process workloads in batches. Strategic BI and analytics are batch-oriented as they are highly read-intensive tasks involving large volumes of data. As shown in Figure 6.4, a batch workload comprises grouped read/writes that have a large data footprint and may contain complex joins and provide high-latency responses.
+In batch mode, data is processed offline in batches and the response time could vary from minutes to hours. As well, data must be persisted to the disk before it can be processed. Batch mode generally involves processing a range of large datasets, either on their own or joined together, essentially addressing the volume and variety characteristics of Big Data datasets.				
+</section>
+				<section>
+					Transactional processing is also known as online processing. Transactional workload processing follows an approach whereby data is processed interactively without delay, resulting in low-latency responses. Transaction workloads involve small amounts of data with random reads and writes.
+OLTP and operational systems, which are generally write-intensive, fall within this category. Although these workloads contain a mix of read/write queries, they are generally more write-intensive than read-intensive.
+				</section>
+
+
 				<section>
 					Map-reduce
+					MapReduce is a widely used implementation of a batch processing framework. It is highly scalable and reliable and is based on the principle of divide-and-conquer, which provides built-in fault tolerance and redundancy. It divides a big problem into a collection of smaller problems that can each be solved quickly. MapReduce has roots in both distributed and parallel computing. MapReduce is a batch-oriented processing engine (Figure 6.7) used to process large datasets using parallel processing deployed over clusters of commodity hardware.
 				</section>
 				<section>
-						Batch
-					</section>
+					Map-reduce 2
+				</section>
+				<section>
+					In realtime mode, data is processed in-memory as it is captured before being persisted to the disk. Response time generally ranges from a sub-second to under a minute. Realtime mode addresses the velocity characteristic of Big Data datasets.
+Within Big Data processing, realtime processing is also called event or stream processing as the data either arrives continuously (stream) or at intervals (event). The individual event/stream datum is generally small in size, but its continuous nature results in very large datasets.
+				</section>
+				<section>
+					Speed Consistency Volume (SCV)
+Whereas the CAP theorem is primarily related to distributed data storage, the SCV (Figure 6.22) principle is related to distributed data processing. It states that a distributed data processing system can be designed to support only two of the following three requirements:
+• Speed – Speed refers to how quickly the data can be processed once it is generated. In the case of realtime analytics, data is processed comparatively faster than batch analytics. This generally excludes the time taken to capture data and focuses only on the actual data processing, such as generating statistics or executing an algorithm.
+• Consistency – Consistency refers to the accuracy and the precision of the results. Results are deemed accurate if they are close to the correct value and precise if close to each
+other. A more consistent system will make use of all available data, resulting in high accuracy and precision as compared to a less consistent system that makes use of sampling techniques, which can result in lower accuracy with an acceptable level of precision.
+• Volume – Volume refers to the amount of data that can be processed. Big Data’s velocity characteristic results in fast growing datasets leading to huge volumes of data that need to be processed in a distributed manner. Processing such voluminous data in its entirety while ensuring speed and consistency is not possible. 
+				</section>
 				<section>
 					Spark
+					The preceding section introduced the on-disk storage device and its various types as a fundamental means of data storage. This section builds upon this knowledge by presenting in-memory storage as a means of providing options for highly performant, advanced data storage.
+An in-memory storage device generally utilizes RAM, the main memory of a computer, as its storage medium to provide fast data access. The growing capacity and decreasing cost of RAM, coupled with the increasing read/write speed of solid state hard drives, has made it possible to develop in-memory data storage solutions.
 				</section>
 				<section>
 					Streaming
+				</section>
+				<section>
+					Cloud vendors
+					\Cost & management
+					Economies of scale, “out-sourced” resource management
+					Reduced Time to deployment
+					Ease of assembly, works “out of the box”
+					Scaling
+					On demand provisioning, co-locate data and compute
+					Reliability
+					Massive, redundant, shared resources
+					Sustainability
+					Hardware not owned
+					
 				</section>
 				<section>
 					Databricks
