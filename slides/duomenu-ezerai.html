@@ -1,0 +1,162 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Duomenų ežerai</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="title" data-background-video=images/duomenu-ezerai/title.mp4 data-background-video-loop data-background-video-muted data-state="dim" >
+					<h1 style="color:white">Duomenų ežerai</h1>
+					<small style="color:white">lekt. Šarūnas Kasnauskas, 2018</small>
+				</section>
+				<section>
+					<h2>Traditional vs Big Dta systems</h2>
+					<img class="stretch" src="images/duomenu-ezerai/traditional-big-data-systems.png ">
+				</section>
+				<section>
+					<h2>Duomenų sandėliavimas</h2>
+					<img class="stretch" src="images/traditional-etl.png">
+				</section>
+				<section>
+					<h2>ETL vs ELT</h2>
+					<img class="stretch" src="images/duomenu-ezerai/etl-vs-elt.jpg">
+				</section>
+				<section>
+					Didžiųjų duomenų įgalinimo sąlygos:
+					Technology should be in place to enable organizations to acquire, store, combine, and enrich huge volumes of unstructured and structured data in raw format
+Ability to perform analytics, real-time and near-real-time analysis at scale, on these huge volumes in an iterative way
+				</section>
+				<section>
+					Case for data lake:
+					The traditional data warehouse (DW) systems are not designed to integrate, scale, and handle this exponential growth of multi-structured data. With the emergence of Big Data, there is a need to bring together data from disparate sources and to generate a meaning out of it; new types of data ranging from social text, audio, video, sensors, and clickstream data have to be integrated to find out complex relationships in the data.
+The traditional systems lack the ability to integrate data from disparate sources. This leads to proliferation of data silos, due to which, business users view data in various perspectives, which eventually thwarts them from making precise and appropriate decisions.
+The schema-on-write approach followed by traditional systems mandate the data model and analytical framework to be designed before any data is loaded. Upfront data modeling fails in a Big Data scenario as we are unaware of the nature of incoming data and the exploratory analysis that has to be performed in order to gain hidden insights. Analytical frameworks are designed to answer only specific questions identified at the design time. This approach does not allow for data discovery.
+With traditional approaches, optimization for analytics is time consuming and incurs huge costs. Such optimization enables known analytics, but fails when there are new requirements.
+In traditional systems, it is difficult to identify what data is available and to integrate the data to answer a question. Metadata management and lineage tracking of data is not available or difficult to implement; manual recreation of data lineage is error-prone and consumes a lot of time.
+				</section>
+				<section>
+					kas yra duomenų ežeras:
+					Data Lake is a huge repository that holds every kind of data in its raw format until it is needed by anyone in the organization to analyze.
+Data Lake is not Hadoop. It uses different tools. Hadoop only implements a subset of functionalities. Data Lake is not a database in the traditional sense of the word. A typical implementation of Data Lake uses various NoSQL and In-Memory databases that could co-exist with its relational counterparts.
+A Data Lake cannot be implemented in isolation. It has to be implemented alongside a data warehouse as it complements various functionalities of a DW.
+It stores large volumes of both unstructured and structured data. It also stores fast-moving streamed data from machine sensors and logs.
+It advocates a Store-All approach to huge volumes of data.
+It is optimized for data crunching with a high-latency batch mode and it is not geared for transaction processing.
+It helps in creating data models that are flexible and could be revised without database redesign.
+It can quickly perform data enrichment that helps in achieving data enhancement, augmentation, classification, and standardization of the data.
+All of the data stored in the Data Lake can be utilized to get an all-inclusive view. This enables near-real-time, more precise predictive models that go beyond sampling and aid in generating multi-dimensional models too.
+It is a data scientist's favorite hunting ground. He gets to access the data stored in its raw glory at its most granular level, so that he can perform any ad-hoc queries, and build an advanced model at any time—Iteratively. The classic data warehouse approach does not support this ability to condense the time between data intake and insight generation.
+				</section>
+				<section>
+					Duomenų sandėlio pliusai: Scale as much as you can: Plug in disparate data sources:Acquire high-velocity data: In order to efficiently stream high-speed data in huge volumes, the Data Lake makes use of tools that can acquire and queue it. The Data Lake utilizes tools such as Kafka, Flume, Scribe, and Chukwa to acquire high-velocity data. This data could be the incessant social chatter in the form of Twitter feeds, WhatsApp messages, or it could be sensor data from the machine exhaust. This ability to acquire high-velocity data and integrate with large volumes of historical data gives Data Lake the edge over Data Warehousing systems, which could not do any of these as effectively.
+					Add a structure: To make sense of vast amounts of data stored in the Data Lake, we should create some structure around the data and pipe it into analysis applications. Applying a structure on unstructured data can be done while ingesting or after being stored in the Data Lake. A structure such as the metadata of a file, word counts, parts of speech tagging, and so on, can be created out of the unstructured data. The Data Lake gives you a unique platform where we have the ability to apply a structure on varied datasets in the same repository with a richer detail; hence, enabling you to process the combined data in advanced analytic scenarios.
+					Store in native format: In a Data Warehouse, the data is premodeled as cubes that are the best storage structures for predetermined analysis routines at the time of ingestion. The Data Lake eliminates the need for data to be premodeled; it provides iterative and immediate access to the raw data. This enhances the delivery of analytical insights and offers unmatched flexibility to ask business questions and seek deeper answers.
+					Don't worry about schema: Traditional data warehouses do not support the schemaless storage of data. The Data Lake leverages Hadoop's simplicity in storing data based on schemaless write and schema-based read modes. This is very helpful for data consumers to perform exploratory analysis and thus, develop new patterns from the data without worrying about its initial structure and ask far-reaching, complex questions to gain actionable intelligence.
+					Unleash your favorite SQL: Once the data is ingested, cleansed, and stored in a structured SQL storage of the Data Lake, you can reuse the existing PL-SQL scripts. The tools such as HAWQ and IMPALA give you the flexibility to run massively parallel SQL queries while simultaneously integrating with advanced algorithm libraries such as MADLib and applications such as SAS. Performing the SQL processing inside the Data Lake decreases the time to achieving results and also consumes far less resources than performing SQL processing outside of it.
+					Advanced algorithms: Unlike a data warehouse, the Data Lake excels at utilizing the availability of large quantities of coherent data along with deep learning algorithms to recognize items of interest that will power real-time decision analytics.
+					Administrative resources: The Data Lake scores better than a data warehouse in reducing the administrative resources required for pulling, transforming, aggregating, and analyzing data.
+				</section>
+				<section>
+						Schema on read/schema on write
+					</section>
+					<section>
+							https://www.xplenty.com/blog/etl-vs-elt/
+					</section>
+				<section>
+					Big data storage
+				</section>
+				<section>
+					Clusters
+					A distributed file system is a file system that can store large files spread across the nodes of a cluster, as illustrated in Figure 5.3. To the client, files appear to be local; however, this is only a logical view as physically the files are distributed throughout the cluster. This local view is presented via the distributed file system and it enables the files to be accessed from multiple locations. Examples include the Google File System (GFS) and Hadoop Distributed File System (HDFS).
+					image
+				</section>
+				<section>
+					Sharding
+					Sharding is the process of horizontally partitioning a large dataset into a collection of smaller, more manageable datasets called shards. 
+				</section>
+				<section>
+					Replication
+				</section>
+				<section>
+					Master-slave
+				</section>
+				<section>
+					Big data processing
+				</section>
+				<section>
+					paralel, distributed
+				</section>
+				<section>
+					Hadoop
+				</section>
+				<section>
+					HDFS
+				</section>
+				<section>
+					Map-reduce
+				</section>
+				<section>
+						Batch
+					</section>
+				<section>
+					Spark
+				</section>
+				<section>
+					Streaming
+				</section>
+				<section>
+					Databricks
+				</section>
+				<section>
+						Lambda	
+					</section>
+					<section>
+						Kappa
+					</section>
+
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				mouseWheel: false,
+				slideNumber: 'c',
+				history: true, 
+				pdfSeparateFragments: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]				
+			});
+		</script>
+	</body>
+</html>
