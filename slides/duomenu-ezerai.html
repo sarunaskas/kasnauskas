@@ -29,174 +29,187 @@
 					<small style="color:white">lekt. Šarūnas Kasnauskas, 2018</small>
 				</section>
 				<section>
-					<h2>Traditional vs Big Dta systems</h2>
-					<img class="stretch" src="images/duomenu-ezerai/traditional-big-data-systems.png ">
-				</section>
-				<section>
 					<h2>Duomenų sandėliavimas</h2>
 					<img class="stretch" src="images/traditional-etl.png">
 				</section>
 				<section>
-					<h2>ETL vs ELT</h2>
+					<h2>Didieji duomenys</h2>
+					<img class="stretch" src="images/4Vs.jpg">					
+				</section>
+				<section>
+					<h2>Tradicinės prieš Didžiųjų duomenų sistemas</h2>
+					<img class="stretch" src="images/duomenu-ezerai/traditional-big-data-systems.png ">
+				</section>
+				<section>
+					<h2>Didžiųjų duomenų įgalinimo sąlygos</h2>
+					<ul>
+						<li class="fragment">Technologijos, kurios įgalina orgnazaciją gauti, talpinti, apjungti ir praturtini didelius kiekius nestruktūruotų ir struktūruotų neapdorotų duomenų, turi egzistuoti</li>
+						<li class="fragment">Turi egzistuoti galimybė analizuoti tuos didelius duomenų kiekius iteratyviu būdu realiu arba beveik realiu laiku</li>
+					</ul>
+				</section>
+				<section>
+					<h2>Duomenų ežeras (<i>Data lake</i>)</h2>
+					<p>Duomenų ežeras, tai didžiulė duomenų saugykla talpinanti įvairių tipų duomenis neapdorotu pavidalu, taip pat darant juos pasiekiamus organizacijos analizei</p>
+				</section>
+				<section>
+					<h2>Argumentai už duomenų ežerą </h2>
+					<ul>
+						<li class="fragment">Tradicinis duomenų sandėlis nėra sukurtas atlaikyti eksponentiškai augančių, skirtingai struktūruotų duomenų integravimą</li>
+						<li class="fragment">Schemos iškart (<i>schema-on-write</i>) metodas naudojamas tradicinėse sistemose verčia duomenų modelį sukurti prieš duomenų įkrovimą</li>
+						<li class="fragment">Tradicinio metodo pokyčių realizavimas atsiradus naujiems reikalavimams tampa imlus laikui ir pinigams</li>
+					</ul>
+				</section>
+				<section>
+					<h2>ETL vs ELT (<i>Extract, Load & Transform</i></h2>
 					<img class="stretch" src="images/duomenu-ezerai/etl-vs-elt.jpg">
 				</section>
+
 				<section>
-					Didžiųjų duomenų įgalinimo sąlygos:
-					Technology should be in place to enable organizations to acquire, store, combine, and enrich huge volumes of unstructured and structured data in raw format
-Ability to perform analytics, real-time and near-real-time analysis at scale, on these huge volumes in an iterative way
+					<h2>Duomenų sandėlio pranašumai</h2>
+					<ul>
+						<li class="fragment">Technologiškai neribojamas mastas</li>
+						<li class="fragment">Skirtingų duomenų šaltinių naudojimas</li>
+						<li class="fragment">Greitų duomenų pasiekimas </li>
+						<li class="fragment">Talpinimas gimtaisiais formatais</li>
+						<li class="fragment">Nesirūpinimas apie schemas</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Transformavimo žingsnio sudedamosios dalys</h2>
+					<ul class="fragment">
+						<li>Išvalymas (<i>Cleansing</i>)</li>
+						<li>Transformavimas (<i>Transformation</i>)</li>
+						<li>Praturtinimas (<i>Enrichment</i>)</li>
+					</ul>
 				</section>
 				<section>
-					Case for data lake:
-					The traditional data warehouse (DW) systems are not designed to integrate, scale, and handle this exponential growth of multi-structured data. With the emergence of Big Data, there is a need to bring together data from disparate sources and to generate a meaning out of it; new types of data ranging from social text, audio, video, sensors, and clickstream data have to be integrated to find out complex relationships in the data.
-The traditional systems lack the ability to integrate data from disparate sources. This leads to proliferation of data silos, due to which, business users view data in various perspectives, which eventually thwarts them from making precise and appropriate decisions.
-The schema-on-write approach followed by traditional systems mandate the data model and analytical framework to be designed before any data is loaded. Upfront data modeling fails in a Big Data scenario as we are unaware of the nature of incoming data and the exploratory analysis that has to be performed in order to gain hidden insights. Analytical frameworks are designed to answer only specific questions identified at the design time. This approach does not allow for data discovery.
-With traditional approaches, optimization for analytics is time consuming and incurs huge costs. Such optimization enables known analytics, but fails when there are new requirements.
-In traditional systems, it is difficult to identify what data is available and to integrate the data to answer a question. Metadata management and lineage tracking of data is not available or difficult to implement; manual recreation of data lineage is error-prone and consumes a lot of time.
+					<h2>Išvalymas</h2>
+					<img class="stretch" src="images/duomenu-ezerai/data-cleansing.png">
 				</section>
 				<section>
-					kas yra duomenų ežeras:
-					Data Lake is a huge repository that holds every kind of data in its raw format until it is needed by anyone in the organization to analyze.
-Data Lake is not Hadoop. It uses different tools. Hadoop only implements a subset of functionalities. Data Lake is not a database in the traditional sense of the word. A typical implementation of Data Lake uses various NoSQL and In-Memory databases that could co-exist with its relational counterparts.
-A Data Lake cannot be implemented in isolation. It has to be implemented alongside a data warehouse as it complements various functionalities of a DW.
-It stores large volumes of both unstructured and structured data. It also stores fast-moving streamed data from machine sensors and logs.
-It advocates a Store-All approach to huge volumes of data.
-It is optimized for data crunching with a high-latency batch mode and it is not geared for transaction processing.
-It helps in creating data models that are flexible and could be revised without database redesign.
-It can quickly perform data enrichment that helps in achieving data enhancement, augmentation, classification, and standardization of the data.
-All of the data stored in the Data Lake can be utilized to get an all-inclusive view. This enables near-real-time, more precise predictive models that go beyond sampling and aid in generating multi-dimensional models too.
-It is a data scientist's favorite hunting ground. He gets to access the data stored in its raw glory at its most granular level, so that he can perform any ad-hoc queries, and build an advanced model at any time—Iteratively. The classic data warehouse approach does not support this ability to condense the time between data intake and insight generation.
+					<h2>Transformavimas</h2>
+					<img class="stretch" src="images/duomenu-ezerai/data-transformation.png">
 				</section>
 				<section>
-					Duomenų sandėlio pliusai: Scale as much as you can: Plug in disparate data sources:Acquire high-velocity data: In order to efficiently stream high-speed data in huge volumes, the Data Lake makes use of tools that can acquire and queue it. The Data Lake utilizes tools such as Kafka, Flume, Scribe, and Chukwa to acquire high-velocity data. This data could be the incessant social chatter in the form of Twitter feeds, WhatsApp messages, or it could be sensor data from the machine exhaust. This ability to acquire high-velocity data and integrate with large volumes of historical data gives Data Lake the edge over Data Warehousing systems, which could not do any of these as effectively.
-					Add a structure: To make sense of vast amounts of data stored in the Data Lake, we should create some structure around the data and pipe it into analysis applications. Applying a structure on unstructured data can be done while ingesting or after being stored in the Data Lake. A structure such as the metadata of a file, word counts, parts of speech tagging, and so on, can be created out of the unstructured data. The Data Lake gives you a unique platform where we have the ability to apply a structure on varied datasets in the same repository with a richer detail; hence, enabling you to process the combined data in advanced analytic scenarios.
-					Store in native format: In a Data Warehouse, the data is premodeled as cubes that are the best storage structures for predetermined analysis routines at the time of ingestion. The Data Lake eliminates the need for data to be premodeled; it provides iterative and immediate access to the raw data. This enhances the delivery of analytical insights and offers unmatched flexibility to ask business questions and seek deeper answers.
-					Don't worry about schema: Traditional data warehouses do not support the schemaless storage of data. The Data Lake leverages Hadoop's simplicity in storing data based on schemaless write and schema-based read modes. This is very helpful for data consumers to perform exploratory analysis and thus, develop new patterns from the data without worrying about its initial structure and ask far-reaching, complex questions to gain actionable intelligence.
-					Unleash your favorite SQL: Once the data is ingested, cleansed, and stored in a structured SQL storage of the Data Lake, you can reuse the existing PL-SQL scripts. The tools such as HAWQ and IMPALA give you the flexibility to run massively parallel SQL queries while simultaneously integrating with advanced algorithm libraries such as MADLib and applications such as SAS. Performing the SQL processing inside the Data Lake decreases the time to achieving results and also consumes far less resources than performing SQL processing outside of it.
-					Advanced algorithms: Unlike a data warehouse, the Data Lake excels at utilizing the availability of large quantities of coherent data along with deep learning algorithms to recognize items of interest that will power real-time decision analytics.
-					Administrative resources: The Data Lake scores better than a data warehouse in reducing the administrative resources required for pulling, transforming, aggregating, and analyzing data.
+					<h2>Praturtinimas</h2>
+					<img class="stretch" src="images/duomenu-ezerai/address-enrichment.png">
 				</section>
 				<section>
-						Schema on read/schema on write
+					<section data-background="#357266">
+						<h2>Didžiųjų duomenų talpinimo principai</h2> 
 					</section>
 					<section>
-							https://www.xplenty.com/blog/etl-vs-elt/
-					</section>
-				
-				<section>
-					Big data storage
-				</section>
-				<section>
-					Clusters
-					A distributed file system is a file system that can store large files spread across the nodes of a cluster, as illustrated in Figure 5.3. To the client, files appear to be local; however, this is only a logical view as physically the files are distributed throughout the cluster. This local view is presented via the distributed file system and it enables the files to be accessed from multiple locations. Examples include the Google File System (GFS) and Hadoop Distributed File System (HDFS).
-					image
-				</section>
-				<section>
-					Sharding
-					Sharding is the process of horizontally partitioning a large dataset into a collection of smaller, more manageable datasets called shards. 
-				</section>
-				<section>
-					Replication
-					Replication stores multiple copies of a dataset, known as replicas, on multiple nodes (Figure 5.7). Replication provides scalability and availability due to the fact that the same data is replicated on various nodes. Fault tolerance is also achieved since data redundancy ensures that data is not lost when an individual node fails. There are two different methods that are used to implement replication:
-• master-slave
-• peer-to-peer
-				</section>
-				<section>
-					CAP theorem
-					The Consistency, Availability, and Partition tolerance (CAP) theorem, also known as Brewer’s theorem, expresses a triple constraint related to distributed database systems. It states that a distributed database system, running on a cluster, can only provide two of the following three properties:
-• Consistency – A read from any node results in the same data across multiple nodes (Figure 5.15).
-Availability – A read/write request will always be acknowledged in the form of a success or a failure (Figure 5.16).
-Partition tolerance – The database system can tolerate communication outages that split the cluster into multiple silos and can still service read/write requests (Figure 5.16).
-				</section>
-				<section>
-					Big data processing
-				</section>
-				<section>
-					paralel,
-					Parallel data processing involves the simultaneous execution of multiple sub-tasks that collectively comprise a larger task. The goal is to reduce the execution time by dividing a single larger task into multiple smaller tasks that run concurrently.
-Although parallel data processing can be achieved through multiple networked machines, it is more typically achieved within the confines of a single machine with multiple processors or cores, as shown in Figure 6.1.
-
-				</section>
-				<section>
-					distributed
-					Distributed data processing is closely related to parallel data processing in that the same principle of “divide-and-conquer” is applied. However, distributed data processing is always achieved through physically separate machines that are networked together as a cluster. In Figure 6.2, a task is divided into three sub-tasks that are then executed on three different machines sharing one physical switch.
-				</section>
-				<section>
-					Hadoop
-					Hadoop is an open-source framework for large-scale data storage and data processing that is compatible with commodity hardware. The Hadoop framework has established itself as a de facto industry platform for contemporary Big Data solutions. It can be used as an ETL engine or as an analytics engine for processing large amounts of structured, semi-structured and unstructured data. From an analysis perspective, Hadoop implements the MapReduce processing framework. Figure 6.3 illustrates some of Hadoop’s features.
-				</section>
-				<section>
-					processing workload
-					A processing workload in Big Data is defined as the amount and nature of data that is processed within a certain amount of time. Workloads are usually divided into two types:
-• batch
-• transactional
-				</section>
-				<section>
-					batch vs real-time
-				</section>
-				<section>
-					Batch
-					Batch processing, also known as offline processing, involves processing data in batches and usually imposes delays, which in turn results in high-latency responses. Batch workloads typically involve large quantities of data with sequential read/writes and comprise of groups of read or write queries.
-Queries can be complex and involve multiple joins. OLAP systems commonly process workloads in batches. Strategic BI and analytics are batch-oriented as they are highly read-intensive tasks involving large volumes of data. As shown in Figure 6.4, a batch workload comprises grouped read/writes that have a large data footprint and may contain complex joins and provide high-latency responses.
-In batch mode, data is processed offline in batches and the response time could vary from minutes to hours. As well, data must be persisted to the disk before it can be processed. Batch mode generally involves processing a range of large datasets, either on their own or joined together, essentially addressing the volume and variety characteristics of Big Data datasets.				
-</section>
-				<section>
-					Transactional processing is also known as online processing. Transactional workload processing follows an approach whereby data is processed interactively without delay, resulting in low-latency responses. Transaction workloads involve small amounts of data with random reads and writes.
-OLTP and operational systems, which are generally write-intensive, fall within this category. Although these workloads contain a mix of read/write queries, they are generally more write-intensive than read-intensive.
-				</section>
-
-
-				<section>
-					Map-reduce
-					MapReduce is a widely used implementation of a batch processing framework. It is highly scalable and reliable and is based on the principle of divide-and-conquer, which provides built-in fault tolerance and redundancy. It divides a big problem into a collection of smaller problems that can each be solved quickly. MapReduce has roots in both distributed and parallel computing. MapReduce is a batch-oriented processing engine (Figure 6.7) used to process large datasets using parallel processing deployed over clusters of commodity hardware.
-				</section>
-				<section>
-					Map-reduce 2
-				</section>
-				<section>
-					In realtime mode, data is processed in-memory as it is captured before being persisted to the disk. Response time generally ranges from a sub-second to under a minute. Realtime mode addresses the velocity characteristic of Big Data datasets.
-Within Big Data processing, realtime processing is also called event or stream processing as the data either arrives continuously (stream) or at intervals (event). The individual event/stream datum is generally small in size, but its continuous nature results in very large datasets.
-				</section>
-				<section>
-					Speed Consistency Volume (SCV)
-Whereas the CAP theorem is primarily related to distributed data storage, the SCV (Figure 6.22) principle is related to distributed data processing. It states that a distributed data processing system can be designed to support only two of the following three requirements:
-• Speed – Speed refers to how quickly the data can be processed once it is generated. In the case of realtime analytics, data is processed comparatively faster than batch analytics. This generally excludes the time taken to capture data and focuses only on the actual data processing, such as generating statistics or executing an algorithm.
-• Consistency – Consistency refers to the accuracy and the precision of the results. Results are deemed accurate if they are close to the correct value and precise if close to each
-other. A more consistent system will make use of all available data, resulting in high accuracy and precision as compared to a less consistent system that makes use of sampling techniques, which can result in lower accuracy with an acceptable level of precision.
-• Volume – Volume refers to the amount of data that can be processed. Big Data’s velocity characteristic results in fast growing datasets leading to huge volumes of data that need to be processed in a distributed manner. Processing such voluminous data in its entirety while ensuring speed and consistency is not possible. 
-				</section>
-				<section>
-					Spark
-					The preceding section introduced the on-disk storage device and its various types as a fundamental means of data storage. This section builds upon this knowledge by presenting in-memory storage as a means of providing options for highly performant, advanced data storage.
-An in-memory storage device generally utilizes RAM, the main memory of a computer, as its storage medium to provide fast data access. The growing capacity and decreasing cost of RAM, coupled with the increasing read/write speed of solid state hard drives, has made it possible to develop in-memory data storage solutions.
-				</section>
-				<section>
-					Streaming
-				</section>
-				<section>
-					Cloud vendors
-					\Cost & management
-					Economies of scale, “out-sourced” resource management
-					Reduced Time to deployment
-					Ease of assembly, works “out of the box”
-					Scaling
-					On demand provisioning, co-locate data and compute
-					Reliability
-					Massive, redundant, shared resources
-					Sustainability
-					Hardware not owned
-					
-				</section>
-				<section>
-					Databricks
-				</section>
-				<section>
-						Lambda	
+						<h2>Paskirstytos failų sistemos (<i>Distributed file systems</i>)</h2>
+						<p>Sistema (Klasteris), leidžianti tvarkyti failus, laikomus daugelyje įvairių serverių. Naudotojui pateikiamas bendras visuose serveriuose esančių failų vaizdas, tarsi visi jie būtų jo kompiuteryje.</p>
 					</section>
 					<section>
-						Kappa
+							<img class="stretch" src="images/duomenu-ezerai/distributed-file-system.png">
+						</section>
+					<section>
+						<h2>Duomenų bazės šukė (<i>sharding</i>)</h2>
+						<p>Tai horizontalus duomenų skaidymo būdas, kai didelis duomenų rinkinys skaidomas į mažesnius rinkinius -  šukes (šardus)</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-ezerai/sharding.png">
+					</section>
+					<section>
+						<h2>Dubliavimas (<i>Replication</i>)</h2>
+						<p>Tai kelių duomenų rinkinio kopijų talpinimas skirtingose vietose/mazguose (<i>nodes</i>)</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-ezerai/replication.png">
+					</section>
+					<section>
+						<h2>Paskirstytos failų sistemos siekiamybės</h2>
+						<ol>
+							<li class="fragment">Skaidinių tolerancija (<i>Partition tolerance</i>) - sistema gali toleruoti komunikacijos tarp mazgų išjungimą</li>
+							<li class="fragment">Darna (<i>Consistency</i>) - bet kurio mazgo duomenų nuskaitymo (<i>read</i>) rezultatas yra tas pats</li>
+							<li class="fragment">Prieinamumas (<i>Availability</i>) - kiekviena nuskaitymo ar įrašymo užklausa yra patvirtinama veikiančio mazgo atsakymu</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Skaidinių tolerancija (<i>Partition tolerance</i>)</h2>
+						<img class="stretch" src="images/duomenu-ezerai/partition-tolerance.png">
+					</section>
+					<section>
+						<h2>Darna (<i>Consistency</i>)</h2>
+						<img class="stretch" src="images/duomenu-ezerai/consistency.png">
+					</section>					<section>
+						<h2>Prieinamumas (<i>Availability</i>)</h2>
+						<img class="stretch" src="images/duomenu-ezerai/availability.png">
 					</section>
 
 
+					<section>
+						<h2><q>CAP</q> teorema</h2>
+						<p>Viena paskirstyta failų sistema gali patenkinti tik dvi iš trijų savybių: darna, prieinamumas, skaidinių tolerancija</p>
+						<img class="stretch" src="images/duomenu-ezerai/cap-theorem.png">
+					</section>
+				</section>
+				 
+				<section>
+					<section data-background="#FF934F">
+						<h2>Didžiųjų duomenų apdorojimas</h2>
+					</section>
+					<section>
+						<h2>Lygiagretus (<i>parallel</i>) apdorojimas</h2>
+						<p>Tai kelių smulkių užduočių, kurios priklauso vienai jas apimančiai užduočiai, atlikimas vienu metu (dažniausiai viename kompiuteryje, keliuose procesoriuose)</p>
+						<img class="stretch" src="images/duomenu-ezerai/paralel.png">
+					</section>
+					<section>
+						<h2>Paskirstytas (<i>Distributed</i>) apdorojimas</h2>
+						<p>Tai bendras kelių kompiuterių veikimas vykdant tą pačią užduotį</p>
+						<img class="stretch" src="images/duomenu-ezerai/dsitributed.png">
+					</section>
+					<section>
+						<h2>Hadoop ekosistema</h2>
+						<img class="stretch" src="images/duomenu-ezerai/hadoop-ecosystem.jpg">
+					</section>
+					<section>
+						<h2>Hadoop sistema</h2>
+						<img class="stretch" src="images/duomenu-ezerai/hadoop-framework.jpg">
+					</section>
+					<section>
+						<h2>Map-reduce</h2>
+						<img class="stretch" src="images/duomenu-ezerai/map-reduce.png">
+					</section>
+					<section>
+						<h2>Map-reduce</h2>
+						<img class="stretch" src="images/duomenu-ezerai/map-reduce2.png">
+					</section>
+					<section>
+						<h2>Apdorojimas diske prieš operatyviąją atmintį</h2>
+						<img class="stretch" src="images/duomenu-ezerai/in-memory vs disk.png">
+						<small>Pvz.: Apache Spark</small>
+					</section>
+					<section>
+						<h2>Paketinis prieš realaus laiko apdorojimą</h2>
+						<img class="stretch" src="images/duomenu-ezerai/batch-vs-stream.jpg">
+						<small>Pvz.: Apache Storm, Apache Flink, Apache Samza,..</small>
+					</section>
+					<section>
+						<h2>Paskirstyto duomenų apdorojimo siekiamybės</h2>
+						<ol>
+							<li class="fragment">Greitis (<i>Speed</i>) - sistema turėtų gebėti iškart apdoroti naujai sugeneruotus duomenis</li>
+							<li class="fragment">Darna (<i>Consistency</i>) - sistema turi apdoroti duomenis taip, kad galutiniai rezultatai būti tikslūs (atitiktų realybę) ir preciziški (vientisi tarpusavyje)</li>
+							<li class="fragment">Apimtis (<i>Volume</i>) - sistema gali apdoroti didžiulį duomenų kiekį</li>
+						</ol>
+					</section>
+					<section>
+							<h2><q>SCV</q> principas</h2>
+							<p>Paskirstyto duomenų apdorojimo sistema gali palaikyti tik du iš trijų reikalavimų: greitis, darna ir apimtis</p>
+							<img class="stretch" src="images/duomenu-ezerai/scv-theorem.png">
+					</section>
+					<section>
+						<h2>Lambda architektūros pavyzdys</h2>
+						<img class="stretch" src="images/duomenu-ezerai/lambda.png">	
+					</section>
+				</section>
+
+				<section>
+						<img class="stretch" src="images/bigdatalandscape.png">
+				</section>
 			</div>
 		</div>
 
