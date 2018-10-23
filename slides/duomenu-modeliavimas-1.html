@@ -24,12 +24,12 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section id="title" data-background=images/analitikos-rezultatas/title.png data-state="dim" >
+				<section id="title" data-background=images/duomenu-modeliavimas/text_data_mining.jpg data-state="dim" >
 					<h1>Duomenų modeliavimas I</h1>
 					<small >lekt. Šarūnas Kasnauskas, 2018</small>
 				</section>
 				<section>
-					<h2>Duomenų tyryba (DT)</h2>
+					<h3>Duomenų tyryba (DT)</h3>
 					<div class="fragment">
 						<q>Įdomių struktūrų (modelių, ryšių, statistinių modelių, šablonų) radimas duomenų bazėse.</q>
 						<footer>– U. Fayyad, S. Chaudhuri ir P. Bradley</footer>
@@ -41,7 +41,7 @@
 					</div>
 				</section>
 				<section>
-					<h2>Mašininis mokymasis (MM)</h2>
+					<h3>Mašininis mokymasis (MM)</h3>
 					<div class="fragment">
 						<q>Dirbtinio intelekto sritis, kuri apima metodų kūrimą, mokančių kompiuterius „mąstyti“.</q>
 						<footer>– Wikipedia</footer>
@@ -54,73 +54,102 @@
 					
 				</section>
 				<section>
-					<img src="images/etp.png">
-				</section>
-				<section>
-					<h2>MM tipai</h2>
+					<h3>MM tipai</h3>
 					<p class="fragment">Prižiūrimas mokymas (<i>Supervised learning</i>)</p>
 					<p class="fragment">Neprižiūrimas mokymas (<i>Unsupervised learning</i>)</p>
 					<p class="fragment">Mokymasis su pastiprinimu (<i>Reinforcement learning</i>)</p>
 				</section>
 				<section>
 						<img src="images/mltypes.png">
-						
 				</section>
 				<section>
 					<h2>DT? MM?</h2>
 					<img class="fragment" src="images/venn.png">
 				</section>
-
 				<section>
-					Pagrindinis skirstymas
+					<h3>Kam to reikia verslui?</h3>
+					<ul>
+						<li>Renkami ir talpinami didžiuliai kiekiai duomenų</li>
+						<li>Pigūs skaičiavimų pajėgumai</li>
+						<li>Konkurencinis spaudimas</li>
+					</ul>
 				</section>
 				<section>
-					regression
-				</section>
-				<section>
-					Clasification
-				</section>
-				<section>
-					Clustering
-				</section>
-				<section>
-					Association rules
-				</section>
-				<section>
-					anomaly detection
-				</section>
-				<section>
-					crips-dm (pabaigoj)
+					<section data-background=#ffbe00>
+						<h2>Klasifikavimas</h2>
+					</section>
+					<section>
+						<h3>Klasifikavimas</h3>
+						<p>Klasės atributo nustatymo modelis, remiantis kitų atributų reikšmėmis</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-modeliavimas/class1.png">
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-modeliavimas/class2.png">
+					</section>
+					<section>
+						Taikymo pvz
+					</section>
 				</section>
 
 				<section>
 					<section data-background=#ffbe00>
-						<h2>Rodikliai</h2>
+						<h2>Regresija</h2>
 					</section>
-					
-				</section>
-				<section>
-					<h3>Kaip/kur rodiklius atvaizduoti?</h3>
-					<img class="stretch" src="images/analitikos-rezultatas/gartner.jpg">
-				</section>
-				<section>
-					<section data-background=#005874>
-						<h2>Duomenų skydelių dizaino principai</h2>	
+					<section>
+						<h3>Regresija</h3>
+						<p>Atributo reikšmės nustatymas, remiantis kitų kiekybinių atributų reikšmėmis priimant linijinį ar nelinijinį priklausomybės modelį</p>
 					</section>
-					
-				</section>
-				<section>
-					<section data-background=#FF934F>
-						<h2>Spalvos</h2>
+					<section>
+						Taikymo pvz
 					</section>
-					
 				</section>
+
 				<section>
 					<section data-background=#ffbe00>
-						<h2>Vizualizacijų tipai</h2>
+						<h2>Klasterizavimas</h2>
 					</section>
-					
+					<section>
+						<h3>Klasterizavimas</h3>
+						<p>Objektų grupavimas tokiu būdu, kad objektai vienoje grupėje būtų panašūs, bet nepanašūs į objektus kitose grupėse</p>
+					</section>
+					<section>
+						Taikymo pvz
+					</section>
 				</section>
+
+				<section>
+					<section data-background=#ffbe00>
+						<h2>Asociatyvinės taisyklės</h2>
+					</section>
+					<section>
+						<h3>Asociatyvinės taisyklės</h3>
+						<p>Turint tam tikrą kiekį įrašų savyje turinčių objektų sąrašus, priklausomybės taisyklių atradimas, kurios prognozuos objektų būvimą remiantis kitų objektų buvimu</p>
+					</section>
+					<section>
+						<img src="images/duomenu-modeliavimas/assoc1.png">
+						<img src="images/duomenu-modeliavimas/assoc2.png">
+					</section>
+					<section>
+						Taikymo pvz
+					</section>
+				</section>
+
+				<section>
+					<section data-background=#ffbe00>
+						<h2>Anomalijų aptikimas</h2>
+					</section>
+					<section>
+						<h3>Anomalijų aptikimas</h3>
+						<p>Reikšmingų nuokrypių nuo standartinio elgesio aptikimas</p>
+					</section>
+					<section>
+						Taikymo pvz
+					</section>
+				</section>
+
+
 
 			</div>
 		</div>
