@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Duomenų modeliavimas I</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section id="title" data-background=images/analitikos-rezultatas/title.png data-state="dim" >
+					<h1>Duomenų modeliavimas I</h1>
+					<small >lekt. Šarūnas Kasnauskas, 2018</small>
+				</section>
+				<section>
+					<h2>Duomenų tyryba (DT)</h2>
+					<div class="fragment">
+						<q>Įdomių struktūrų (modelių, ryšių, statistinių modelių, šablonų) radimas duomenų bazėse.</q>
+						<footer>– U. Fayyad, S. Chaudhuri ir P. Bradley</footer>
+					</div>
+					<br>
+					<div class="fragment">
+						<q>Didelių duomenų kiekių tyrinėjimas ir analizė automatizuotu arba pusiau automatizuotu būdu, siekiant rasti naudingus modelius (angl. patterns) ir taisykles.</q> 
+						<footer>– M. J. A. Berry ir G. S. Linoff</footer>
+					</div>
+				</section>
+				<section>
+					<h2>Mašininis mokymasis (MM)</h2>
+					<div class="fragment">
+						<q>Dirbtinio intelekto sritis, kuri apima metodų kūrimą, mokančių kompiuterius „mąstyti“.</q>
+						<footer>– Wikipedia</footer>
+					</div>
+					<br>
+					<div class="fragment">
+						<q>Kompiuterio programą galima laikyti besimokančia iš patirties <b>E</b> (<i>Experience</i>) su tam tikrų užduočių aibe <b>T</b> (<i>Task</i>) ir vertinimo rodikliu <b>P</b> (<i>Performance</i>), jeigu užduoties <b>T</b> atlikimas, matuojant <b>P</b>, tobulėja su patirtimi <b>E</b>.</q> 
+						<footer>– T. Mitchell, 1997</footer>
+					</div>
+					
+				</section>
+				<section>
+					<img src="images/etp.png">
+				</section>
+				<section>
+					<h2>MM tipai</h2>
+					<p class="fragment">Prižiūrimas mokymas (<i>Supervised learning</i>)</p>
+					<p class="fragment">Neprižiūrimas mokymas (<i>Unsupervised learning</i>)</p>
+					<p class="fragment">Mokymasis su pastiprinimu (<i>Reinforcement learning</i>)</p>
+				</section>
+				<section>
+						<img src="images/mltypes.png">
+						
+				</section>
+				<section>
+					<h2>DT? MM?</h2>
+					<img class="fragment" src="images/venn.png">
+				</section>
+
+				<section>
+					Pagrindinis skirstymas
+				</section>
+				<section>
+					regression
+				</section>
+				<section>
+					Clasification
+				</section>
+				<section>
+					Clustering
+				</section>
+				<section>
+					Association rules
+				</section>
+				<section>
+					anomaly detection
+				</section>
+				<section>
+					crips-dm (pabaigoj)
+				</section>
+
+				<section>
+					<section data-background=#ffbe00>
+						<h2>Rodikliai</h2>
+					</section>
+					
+				</section>
+				<section>
+					<h3>Kaip/kur rodiklius atvaizduoti?</h3>
+					<img class="stretch" src="images/analitikos-rezultatas/gartner.jpg">
+				</section>
+				<section>
+					<section data-background=#005874>
+						<h2>Duomenų skydelių dizaino principai</h2>	
+					</section>
+					
+				</section>
+				<section>
+					<section data-background=#FF934F>
+						<h2>Spalvos</h2>
+					</section>
+					
+				</section>
+				<section>
+					<section data-background=#ffbe00>
+						<h2>Vizualizacijų tipai</h2>
+					</section>
+					
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				mouseWheel: false,
+				slideNumber: 'c',
+				history: true, 
+				pdfSeparateFragments: false,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]				
+			});
+		</script>
+	</body>
+</html>
