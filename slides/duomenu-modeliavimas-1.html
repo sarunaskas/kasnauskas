@@ -89,22 +89,73 @@
 						<img class="stretch" src="images/duomenu-modeliavimas/class2.png">
 					</section>
 					<section>
-						Taikymo pvz
+						<h3>Klasifikavimo pavyzdžiai</h3>
+						<table style="font-size: 0.8em">
+							<tr>
+								<th>Užduotis</th>
+								<th>Atributų rinkinys</th>
+								<th>Klasė</th>
+							</tr>
+							<tr>
+								<td>Elektroninių laiškų kategorizavimas</td>
+								<td>Požymiai surinkti iš antraštės ir turinio</td>
+								<td>Spamas ar ne</td>
+							</tr>
+							<tr>
+								<td>Auglio ląstelių identifikaviama</td>
+								<td>Požymiai surinkti MRI metu</td>
+								<td>Piktybinės ląstelės ar ne</td>
+							</tr>
+							<tr>
+								<td>Visatų kategorizavimas</td>
+								<td>Požymiai surinkti iš teleskopo vaizdų</td>
+								<td>Elipsinė, spiralinė ar netaisyklingoji galaktika</td>
+							</tr>	
+						</table>
 					</section>
+
+					<section>
+						Klaasifikavimo būdai...
+					</section>
+					<section>
+						Apply model to test data (praeiti)
+					</section>
+					<section>
+						How to determine best split
+					</section>
+					<section>
+						How to determine best split 2 (greedy)
+					</section>
+					<section>
+						Gini formulė
+					</section>
+					<section>
+							Categorical Attributes: Computing Gini Index
+					</section>
+					<section>
+							Classification: application 1
+							Fraud Detection
+	Goal: Predict fraudulent cases in credit card transactions.
+	Approach:
+	Use credit card transactions and the information on its account-holder as attributes.
+	When does a customer buy, what does he buy, how often he pays on time, etc
+	Label past transactions as fraud or fair transactions. This forms the class attribute.
+	Learn a model for the class of the transactions.
+	Use this model to detect fraud by observing credit card transactions on an account
+						</section>
+						<section>
+								Churn prediction for telephone customers
+								Goal: To predict whether a customer is likely to be lost to a competitor.
+								Approach:
+								Use detailed record of transactions with each of the past and present customers, to find attributes.
+								How often the customer calls, where he calls, what time-of-the day he calls most, his financial status, marital status, etc. 
+								Label the customers as loyal or disloyal.
+								Find a model for loyalty.
+								
+						</section>
 				</section>
 
-				<section>
-					<section data-background=#ffbe00>
-						<h2>Regresija</h2>
-					</section>
-					<section>
-						<h3>Regresija</h3>
-						<p>Atributo reikšmės nustatymas, remiantis kitų kiekybinių atributų reikšmėmis priimant linijinį ar nelinijinį priklausomybės modelį</p>
-					</section>
-					<section>
-						Taikymo pvz
-					</section>
-				</section>
+				
 
 				<section>
 					<section data-background=#ffbe00>
@@ -115,7 +166,40 @@
 						<p>Objektų grupavimas tokiu būdu, kad objektai vienoje grupėje būtų panašūs, bet nepanašūs į objektus kitose grupėse</p>
 					</section>
 					<section>
-						Taikymo pvz
+						Klasterizavimo pavyzdžiai
+					</section>
+					<section>
+						Klaterizavimo tipai: hierarchical, partitional
+					</section>
+					<section>
+						K-means sąlygos
+					</section>
+					<section>
+						example of k-means clustering
+					</section>
+					<section>
+						example of k-means clustering 2
+					</section>
+					<section>
+						SSE vertinimui formulė
+					</section>
+					<section>
+							Market Segmentation:
+
+							Goal: subdivide a market into distinct subsets of customers where any subset may conceivably be selected as a market target to be reached with a distinct marketing mix.
+							Approach: 
+							Collect different attributes of customers based on their geographical and lifestyle related information.
+							Find clusters of similar customers.
+							Measure the clustering quality by observing buying patterns of customers in same cluster vs. those from different clusters. 
+							
+					</section>
+					<section>
+							Document Clustering:
+
+							Goal: To find groups of documents that are similar to each other based on the important terms appearing in them.
+							
+							Approach: To identify frequently occurring terms in each document. Form a similarity measure based on the frequencies of different terms. Use it to cluster.
+							
 					</section>
 				</section>
 
@@ -132,22 +216,78 @@
 						<img src="images/duomenu-modeliavimas/assoc2.png">
 					</section>
 					<section>
-						Taikymo pvz
+							Itemset
+							A collection of one or more items
+							Example: {Milk, Bread, Diaper}
+							k-itemset
+							An itemset that contains k items
+							Support count ()
+							Frequency of occurrence of an itemset
+							E.g.   ({Milk, Bread,Diaper}) = 2 
+							Support
+							Fraction of transactions that contain an itemset
+							E.g.   s({Milk, Bread, Diaper}) = 2/5
+							Frequent Itemset
+							An itemset whose support is greater than or equal to a minsup threshold
+							
+					</section>
+					<section>
+							Given a set of transactions T, the goal of association rule mining is to find all rules having 
+							support ≥ minsup threshold
+							confidence ≥ minconf threshold
+							
+					</section>
+					<section>
+							Example of Rules:
+							{Milk,Diaper}  {Beer} (s=0.4, c=0.67){Milk,Beer}  {Diaper} (s=0.4, c=1.0)
+							{Diaper,Beer}  {Milk} (s=0.4, c=0.67)
+							{Beer}  {Milk,Diaper} (s=0.4, c=0.67) {Diaper}  {Milk,Beer} (s=0.4, c=0.5) 
+							{Milk}  {Diaper,Beer} (s=0.4, c=0.5)
+							
+					</section>
+					<section>
+							Apriori principle:
+							If an itemset is frequent, then all of its subsets must also be frequent
+							
+					</section>
+					<section>
+						Illustrating apriori 1
+					</section>
+					<section>
+							Illustrating apriori 2
+					</section>
+					<section>
+							Illustrating apriori 3
+					</section>
+					<section>
+							Illustrating apriori 4
+					</section>
+					<section>
+							Illustrating apriori 5
+					</section>
+					<section>
+							Illustrating apriori 6
+					</section>
+					<section>
+							Given a frequent itemset L, find all non-empty subsets f  L such that f  L – f satisfies the minimum confidence requirement
+							If {A,B,C,D} is a frequent itemset, candidate rules:
+							ABC D, 	ABD C, 	ACD B, 	BCD A, A BCD,	B ACD,	C ABD, 	D ABCAB CD,	AC  BD, 	AD  BC, 	BC AD, BD AC, 	CD AB,	
+							If |L| = k, then there are 2k – 2 candidate association rules (ignoring L   and   L)
+							
+					</section>
+					<section>
+							Market-basket analysis
+							Rules are used for sales promotion, shelf management, and inventory management
+							
+							Telecommunication alarm diagnosis
+							Rules are used to find combination of alarms that occur together frequently in the same time period
+							
+							Medical Informatics
+							Rules are used to find combination of patient symptoms and test results associated with certain diseases
+							
 					</section>
 				</section>
 
-				<section>
-					<section data-background=#ffbe00>
-						<h2>Anomalijų aptikimas</h2>
-					</section>
-					<section>
-						<h3>Anomalijų aptikimas</h3>
-						<p>Reikšmingų nuokrypių nuo standartinio elgesio aptikimas</p>
-					</section>
-					<section>
-						Taikymo pvz
-					</section>
-				</section>
 
 
 
