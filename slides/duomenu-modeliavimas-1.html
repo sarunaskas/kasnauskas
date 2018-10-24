@@ -69,9 +69,9 @@
 				<section>
 					<h3>Kam to reikia verslui?</h3>
 					<ul>
-						<li>Renkami ir talpinami didžiuliai kiekiai duomenų</li>
-						<li>Pigūs skaičiavimų pajėgumai</li>
-						<li>Konkurencinis spaudimas</li>
+						<li class="fragment">Renkami ir talpinami didžiuliai kiekiai duomenų</li>
+						<li class="fragment">Pigūs skaičiavimų pajėgumai</li>
+						<li class="fragment">Konkurencinis spaudimas</li>
 					</ul>
 				</section>
 				<section>
@@ -80,7 +80,7 @@
 					</section>
 					<section>
 						<h3>Klasifikavimas</h3>
-						<p>Klasės atributo nustatymo modelis, remiantis kitų atributų reikšmėmis</p>
+						<p class="fragment">Klasės atributo nustatymo modelis, remiantis kitų atributų reikšmėmis</p>
 					</section>
 					<section>
 						<img class="stretch" src="images/duomenu-modeliavimas/class1.png">
@@ -89,8 +89,8 @@
 						<img class="stretch" src="images/duomenu-modeliavimas/class2.png">
 					</section>
 					<section>
-						<h3>Klasifikavimo pavyzdžiai</h3>
-						<table style="font-size: 0.8em">
+						<h3>Atributų pavyzdžiai</h3>
+						<table class="fragment" style="font-size: 0.8em">
 							<tr>
 								<th>Užduotis</th>
 								<th>Atributų rinkinys</th>
@@ -102,7 +102,7 @@
 								<td>Spamas ar ne</td>
 							</tr>
 							<tr>
-								<td>Auglio ląstelių identifikaviama</td>
+								<td>Auglio ląstelių identifikavimas</td>
 								<td>Požymiai surinkti MRI metu</td>
 								<td>Piktybinės ląstelės ar ne</td>
 							</tr>
@@ -115,182 +115,216 @@
 					</section>
 
 					<section>
-						Klaasifikavimo būdai...
+						<img class="stretch" src="images/duomenu-modeliavimas/class-test.png">
 					</section>
 					<section>
-						Apply model to test data (praeiti)
+						<h3>Kaip pasirinkti geriausią skaidymą?</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/class-split.png">
 					</section>
-					<section>
-						How to determine best split
-					</section>
-					<section>
-						How to determine best split 2 (greedy)
-					</section>
-					<section>
-						Gini formulė
-					</section>
-					<section>
-							Categorical Attributes: Computing Gini Index
-					</section>
-					<section>
-							Classification: application 1
-							Fraud Detection
-	Goal: Predict fraudulent cases in credit card transactions.
-	Approach:
-	Use credit card transactions and the information on its account-holder as attributes.
-	When does a customer buy, what does he buy, how often he pays on time, etc
-	Label past transactions as fraud or fair transactions. This forms the class attribute.
-	Learn a model for the class of the transactions.
-	Use this model to detect fraud by observing credit card transactions on an account
-						</section>
-						<section>
-								Churn prediction for telephone customers
-								Goal: To predict whether a customer is likely to be lost to a competitor.
-								Approach:
-								Use detailed record of transactions with each of the past and present customers, to find attributes.
-								How often the customer calls, where he calls, what time-of-the day he calls most, his financial status, marital status, etc. 
-								Label the customers as loyal or disloyal.
-								Find a model for loyalty.
-								
-						</section>
-				</section>
 
+					<section>
+						<h3>Geriausio padalijimo paieškos principas</h3>
+						<p class="fragment">Atšakos su <b>tyriausiu</b> klasės padalinimu tinkamiausios</p>
+						<p class="fragment">Tam reikalingas tyrumo pamatavimas</p>
+						<img class="fragment" class="stretch" src="images/duomenu-modeliavimas/inpurity.png">
+
+					</section>
+					<section>
+						<h3>Gini indeksas</h3>
+						<p>Vienas iš daugėlio tyrumo matavimų</p>
+						<img class="stretch" src="images/duomenu-modeliavimas/gini.png">
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-modeliavimas/gini-computation.png">
+					</section>
+					<section>
+						<h3>Klasifikavimo metodai</h3>
+						<ul>
+							<li class="fragment">Sprendimų medžiai</li>
+							<li class="fragment">k kaimynų klasifikavimas (<i>K nearest-neighbours</i>)</li>
+							<li class="fragment">Neuroniniai tinklai</li>
+							<li class="fragment">Naivaus Bajeso klasifikavimas (<i>Naïve Bayes</i>)</li>
+							<li class="fragment">Atraminių vektorių klasifikavimas (<i>Support vector machines</i>)</li>
+							<li class="fragment">Sudėtiniai klasifikatoriai: Sprendimų miškai</li>
+							<li class="fragment">...</li>
+						</ul>
+					</section>
+					<section>
+						<h3><i>k Nearest-neighbours</i></h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/knn.png">
+					</section>
+					<section>
+						<h3><i>Random forrest</i></h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/randomforrest.png">
+					</section>
+					<section>
+						<h3>Klasifikavimo taikymas: sukčiavimo aptikimas</h3>
+						<p class="fragment"><b>Tiklas:</b> nuspėti nesąžiningas kreditinių kortelių transakcijas</p>
+						<p class="fragment"><b>Metodas:</b></p>
+						<ol style="font-size: 0.7em">
+							<li class="fragment">Naudoti transakcijas ir sąskaitos savininko informaciją kaip atributus: ką, kada klientas perka, kaip dažnai susimoka laiku ir t.t.</li>
+							<li class="fragment">Sužymėti praeities transakcijas kaip nesąžiningas ar sąžiningas - klasės atributas</li>
+							<li class="fragment">Apmokyti modelį transkacijų klasei nustatyti</li>
+							<li class="fragment">Naudoti modelį nesąžiningų transakcijų sąskaitoje aptikimui</li>
+						</ol> 
+					</section>
+					<section>
+						<h3>Klasifikavimo taikymas: mobilaus ryšio klientų netekimas</h3>
+						<p class="fragment"><b>Tiklas:</b> nuspėti ar klientas bus prarastas konkurentams</p>
+						<p class="fragment"><b>Metodas:</b></p>
+						<ol style="font-size: 0.7em">
+							<li class="fragment">Naudoti kiekvieno buvusio ir dabartinio kliento transakcijų įrašus atributų paieškai: kaip dažnai, kokiu paros metu ir kur skambina, jo finansinis, vedybinis statusas</li>
+							<li class="fragment">Sužymėti klientus kaip lojalius arba ne</li>
+							<li class="fragment">Apmokyti modelį lojalumui nustatyti</li>
+							<li class="fragment">Imtis veiksmų klientams išlaikyti</li>
+						</ol> 
+					</section>
+				</section>
 				
 
 				<section>
-					<section data-background=#ffbe00>
+					<section data-background=#357266>
 						<h2>Klasterizavimas</h2>
 					</section>
 					<section>
 						<h3>Klasterizavimas</h3>
-						<p>Objektų grupavimas tokiu būdu, kad objektai vienoje grupėje būtų panašūs, bet nepanašūs į objektus kitose grupėse</p>
+						<p class="fragment">Objektų grupavimas tokiu būdu, kad objektai vienoje grupėje būtų panašūs, bet nepanašūs į objektus kitose grupėse</p>
 					</section>
 					<section>
-						Klasterizavimo pavyzdžiai
+						<h3>Klaterizavimo tipai: hierarchinis, particinis</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/hierarchical-partitional.png">
 					</section>
 					<section>
-						Klaterizavimo tipai: hierarchical, partitional
+						<h3>Particinis</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/partitional.png">
 					</section>
 					<section>
-						K-means sąlygos
+						<h3>Hierarchinis</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/hierarchical.png">
 					</section>
 					<section>
-						example of k-means clustering
+						<h3>K-means</h3>>
+						<img class="stretch" src="images/duomenu-modeliavimas/kmeans1.png">
 					</section>
 					<section>
-						example of k-means clustering 2
+						<h3>K-means </h3>
+						<ul>
+							<li class="fragment">Particinis klasterizavimo būdas</li>
+							<li class="fragment">Klasterių kiekis turi būti specifikuotas iš anskto</li>
+							<li class="fragment">Kiekvienas klasteris susietas su centru</li>
+							<li class="fragment">Kiekvienas taškas priskiriamas artimiausiam centrui</li>
+							<li class="fragment">Iteraciniu būdu centrų lokacijos pakeičiamos</li>
+							<li class="fragment">Taškai perskirstomi</li>
+						</ul>
 					</section>
 					<section>
-						SSE vertinimui formulė
+						<h3>K-means</h3>>
+						<img class="stretch" src="images/duomenu-modeliavimas/kmeans2.png">
 					</section>
 					<section>
-							Market Segmentation:
+						<h3>K-means vertinimas</h3>
+						<p>Paklaidų kvardatų suma (<i>Sum of Squared Errors</i>)</p>
+						<img class="stretch" src="images/duomenu-modeliavimas/SSE.png">
+					</section>
+					<section>
+						<iframe class="stretch" src="https://www.naftaliharris.com/blog/visualizing-k-means-clustering/"></iframe>
+					</section>
+					<section>
+						<h3>Klasterizavimo taikymas: rinkos segmentavimas</h3>
+						<p class="fragment"><b>Tiklas:</b> padalinti rinką į skirtingų klientų grupes tikslinės rinkodaros tiklais</p>
+						<p class="fragment"><b>Metodas:</b></p>
+						<ol style="font-size: 0.7em">
+							<li class="fragment">Surinkti skirtingus atributus apie klientus pagal jų geografinę lokaciją, įpročius</li>
+							<li class="fragment">Surasti panašių klientų klasterius</li>
+							<li class="fragment">Išmatuoti klasterizavimo kokybę remiantis to paties klasterio klientų elgsena lyginant su kitais kalsteriais</li>
+							<li class="fragment">Taikyti tikslinę rinkodarą skirtingiems klasteriams</li>
+						</ol> 
+					</section>
+					<section>
+						<h3>Klasterizavimo taikymas: dokumentų klasterizavimass</h3>
+						<p class="fragment"><b>Tiklas:</b> surasti panašių dokumentų grupes pagal juose naudojamus terminus</p>
+						<p class="fragment"><b>Metodas:</b></p>
+						<ol style="font-size: 0.7em">
+							<li class="fragment">Identifikuoti dažnai vartojamus terminus kiekviename dokumente</li>
+							<li class="fragment">Suformulutoi panašumo matmenį remiantis skirtingų terminų panašumu</li>
+							<li class="fragment">Naudoti tai klasteriams kurti</li>
+						</ol> 
+					</section>
 
-							Goal: subdivide a market into distinct subsets of customers where any subset may conceivably be selected as a market target to be reached with a distinct marketing mix.
-							Approach: 
-							Collect different attributes of customers based on their geographical and lifestyle related information.
-							Find clusters of similar customers.
-							Measure the clustering quality by observing buying patterns of customers in same cluster vs. those from different clusters. 
-							
-					</section>
-					<section>
-							Document Clustering:
-
-							Goal: To find groups of documents that are similar to each other based on the important terms appearing in them.
-							
-							Approach: To identify frequently occurring terms in each document. Form a similarity measure based on the frequencies of different terms. Use it to cluster.
-							
-					</section>
 				</section>
 
 				<section>
-					<section data-background=#ffbe00>
+					<section data-background=#E0F2E9>
 						<h2>Asociatyvinės taisyklės</h2>
 					</section>
 					<section>
 						<h3>Asociatyvinės taisyklės</h3>
-						<p>Turint tam tikrą kiekį įrašų savyje turinčių objektų sąrašus, priklausomybės taisyklių atradimas, kurios prognozuos objektų būvimą remiantis kitų objektų buvimu</p>
+						<p class="fragment">Turint tam tikrą kiekį transakcijų savyje turinčių objektų aibes, priklausomybės taisyklių atradimas, kurios prognozuos vienų objektų pasitaikymą remiantis kitų objektų buvimu</p>
 					</section>
 					<section>
 						<img src="images/duomenu-modeliavimas/assoc1.png">
-						<img src="images/duomenu-modeliavimas/assoc2.png">
+						<img class="fragment" src="images/duomenu-modeliavimas/assoc2.png">
 					</section>
 					<section>
-							Itemset
-							A collection of one or more items
-							Example: {Milk, Bread, Diaper}
-							k-itemset
-							An itemset that contains k items
-							Support count ()
-							Frequency of occurrence of an itemset
-							E.g.   ({Milk, Bread,Diaper}) = 2 
-							Support
-							Fraction of transactions that contain an itemset
-							E.g.   s({Milk, Bread, Diaper}) = 2/5
-							Frequent Itemset
-							An itemset whose support is greater than or equal to a minsup threshold
-							
+						<h3>Apibrėžimai</h3>
+						<p class="fragment" style="font-size: 0.7em"><b>Rinkinys</b> - vieno ar kelių objektų kolekcija ({Pienas, Duona, Vystiklai)</p>
+						<p class="fragment" style="font-size: 0.7em"><b>Palaikymas</b> - procentinė dalis transakcijų, kurioms priklauso konkretus rinkinys ({Pienas, Duona, Vystiklai} = 40%) </p>
+						<p class="fragment" style="font-size: 0.7em"><b>Dažnas rinkinys</b> - rinkinys, kurio palaikymas didesnis už minimalią palaikymo  ribą</p>
+						<p class="fragment" style="font-size: 0.7em"><b>Asociatyvinė taisyklė</b> - X -> Y</p>
+						<p class="fragment" style="font-size: 0.7em"><b>Stiprumas</b> - transakcijų, kuriose pasitvirtina tam tikra taisyklė X -> Y santykis su transakcijomis, kuriose buvo X (kairioji pusė)</p>
 					</section>
 					<section>
-							Given a set of transactions T, the goal of association rule mining is to find all rules having 
-							support ≥ minsup threshold
-							confidence ≥ minconf threshold
-							
+						<h3>Asociatyvinių taisyklių tikslas</h3>
+						<p class="fragment">Duotam transakcijų sąrašui, rasti visas taisykles, kurių rinkiniai yra dažni (palaikymas didesnis už minimalų palaikymą (<i>minsupp</i>)) ir taisyklės yra stiprios (stiprumas didesnis už minimalų stiprumą (<i>minconf</i>))</p>
 					</section>
 					<section>
-							Example of Rules:
-							{Milk,Diaper}  {Beer} (s=0.4, c=0.67){Milk,Beer}  {Diaper} (s=0.4, c=1.0)
-							{Diaper,Beer}  {Milk} (s=0.4, c=0.67)
-							{Beer}  {Milk,Diaper} (s=0.4, c=0.67) {Diaper}  {Milk,Beer} (s=0.4, c=0.5) 
-							{Milk}  {Diaper,Beer} (s=0.4, c=0.5)
-							
+						<h3>Taisyklių pavyzdžiai:</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/assoc3.png">
+						<ul>
+							<li class="fragment">{Pienas, Vystyklai} -> {Alus} (p=0.4, s=0.67)</li>
+							<li class="fragment">{Pienas, Alus} -> {Vystyklai} (p=0.4, s=1.0)</li>
+							<li class="fragment">{Vystyklai, Alus} -> {Pienas} (p=0.4, s=0.67)</li>
+							<li class="fragment">{Alus} -> {Pienas, Vystyklai} (p=0.4, s=0.67)</li>
+						</ul>						
 					</section>
 					<section>
-							Apriori principle:
-							If an itemset is frequent, then all of its subsets must also be frequent
-							
+						<h3>Apriori algoritmas</h3>
+						<p class="fragment">Principas - jei rinkinys yra dažnas, tuomet ir visi jo subrinkiniai yra dažni</p>
 					</section>
 					<section>
-						Illustrating apriori 1
+						<img class="stretch" src="images/duomenu-modeliavimas/apriori1.png">
 					</section>
 					<section>
-							Illustrating apriori 2
+						<img class="stretch" src="images/duomenu-modeliavimas/apriori2.png">
 					</section>
 					<section>
-							Illustrating apriori 3
+						<img class="stretch" src="images/duomenu-modeliavimas/apriori3.png">
 					</section>
 					<section>
-							Illustrating apriori 4
+						<img class="stretch" src="images/duomenu-modeliavimas/apriori4.png">
 					</section>
 					<section>
-							Illustrating apriori 5
+						<img class="stretch" src="images/duomenu-modeliavimas/apriori5.png">
 					</section>
 					<section>
-							Illustrating apriori 6
+						<img class="stretch" src="images/duomenu-modeliavimas/apriori6.png">
 					</section>
 					<section>
-							Given a frequent itemset L, find all non-empty subsets f  L such that f  L – f satisfies the minimum confidence requirement
-							If {A,B,C,D} is a frequent itemset, candidate rules:
-							ABC D, 	ABD C, 	ACD B, 	BCD A, A BCD,	B ACD,	C ABD, 	D ABCAB CD,	AC  BD, 	AD  BC, 	BC AD, BD AC, 	CD AB,	
-							If |L| = k, then there are 2k – 2 candidate association rules (ignoring L   and   L)
-							
+						<h3>Taisyklių generavimas</h3>
+						<p class="fragment">Dažnų rinkinių skaidymas į taisykles kandidates</p>
+						<p class="fragment">Taisyklės vertinamos pagal stiprumą</p>
+						<p class="fragment">Didėjant iš to paties rinkinio sudarytų taisyklių objektų kiekiui dešinėje - taisyklių stiprumas gali tik mažėti</p>
 					</section>
 					<section>
-							Market-basket analysis
-							Rules are used for sales promotion, shelf management, and inventory management
-							
-							Telecommunication alarm diagnosis
-							Rules are used to find combination of alarms that occur together frequently in the same time period
-							
-							Medical Informatics
-							Rules are used to find combination of patient symptoms and test results associated with certain diseases
-							
+						<img class="stretch" src="images/duomenu-modeliavimas/rules.png">
+					</section>
+					<section>
+						<h3>Asociatyvinių taisyklių taikymas</h3>
+						<p class="fragment"><b>Prekių krepšelio analizė</b> - taisyklės akcijoms, lentynų išdėstymui, sandėlio valdymui</p>
+						<p class="fragment"><b>Finansinės paslaugos</b> - vienas klientas (jo bankinės transkacijos) kaip viena transakcija pasiūlymams, rekomendacijoms</p>
+						<p class="fragment"><b>Medicininė informatika</b> - pacientų simptomų ir testų rezultatų sąsaja su tam tikromis ligomis</p>
 					</section>
 				</section>
-
-
-
-
 			</div>
 		</div>
 
