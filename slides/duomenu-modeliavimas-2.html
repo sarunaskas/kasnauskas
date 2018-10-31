@@ -30,6 +30,104 @@
 				</section>
 				<section>
 					<section data-background=#ffbe00>
+						<h2>Regresija</h2>
+					</section>
+					<section>
+						<h3>Regresija</h3>
+						<p class="fragment">Priklausomojo kintamojo reikšmės prognozavimas remiantis nepriklausomų kintamųjų reikšmėmis</p>
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-modeliavimas/regression.gif">
+					</section>
+					<section>
+						<h3>Modeliuojama populiacija</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/multi-regression-equation.png">
+					</section>
+					<section>
+						<h3>Prognozuojamos reikšmės</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/multi-regression-solution.png">
+					</section>
+					<section>
+						<h3>Tiesinė regresijos sprendimas</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/linear-formula.png">
+					</section>
+					<section>
+						<h3>Tiesinė regresija</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/linear-sse.jpeg">
+					</section>
+					<section>
+						<h3>R kvadratas</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/r-squared.png">
+					</section>
+					<section>
+						<iframe class="stretch" src="http://www.shodor.org/interactivate/activities/Regression/"></iframe>
+					</section>
+					<section>
+							<h3>Regresijų tipai</h3>
+							<ul>
+								<li class="fragment">Tiesinė regresija</li>
+								<li class="fragment">Logistinė regresija</li>
+								<li class="fragment">Lasso regresija</li>
+								<li class="fragment">Ridge regresija</li>
+								<li class="fragment"><i>Elastic net</i> procedūra</li>
+								<li class="fragment">Sprendimų miškai</li>
+								<li class="fragment">...</li>
+							</ul>
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-modeliavimas/overfit2.png">						
+					</section>
+					<section>
+						<img class="stretch" src="images/duomenu-modeliavimas/overfitting.png">
+					</section>
+					<section>
+						<h3>Lasso regresija</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/lasso.png">
+					</section>
+					<section>
+						<h3>Ridge regresija</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/ridge.png">
+					</section>
+					<section>
+						<h3>Kokią regresiją rinktis?</h3>
+						<ul>
+							<li class="fragment">Nepriklausomų kintamųjų kiekis</li>
+							<li class="fragment">Regresijos linijos forma</li>
+							<li class="fragment">Priklausomojo kintamojo tipas</li>
+						</ul>
+					</section>
+					<section>
+						<img src="images/azureml.PNG">
+					</section>
+					<section>
+						<img src="images/scikit.png">
+					</section>
+
+					<section>
+						<h3>Regresijos taikymas: nekilnojamo turto vertės nustatymas</h3>
+						<p class="fragment"><b>Tiklas:</b> nustatyti nekilnojamo turto vertę pagal požymius</p>
+						<p class="fragment"><b>Metodas:</b></p>
+						<ol style="font-size: 0.7em">
+							<li class="fragment">Surinkti pirktų/parduotų nekilnojamo turto objektų kainas bei jų atributus: kvadratūra, miegamieji, lokacija,..</li>
+							<li class="fragment">Surasti geriausią ir objektyviausią regresijos modelį kainų nuspėjimui</li>
+							<li class="fragment">Remianti modeliu nustatyti prognozuoti naujų objektų vertę</li>
+							<li class="fragment">Supirkti nuvertinamą turtą</li>
+						</ol> 
+					</section>
+					<section>
+						<h3>Regresijos taikymas: darbuotojų išėjimo iš darbo tikimybė</h3>
+						<p class="fragment"><b>Tiklas:</b> nustatyti dabartinių darbuotojų išėjimo iš darbo tikimybę</p>
+						<p class="fragment"><b>Metodas:</b></p>
+						<ol style="font-size: 0.7em">
+							<li class="fragment">Surinkti prieinamus duomenis apie dabartinius ir buvusius darbuotjus: stažas, atlyginimas, pareigos, įsitraukimas,..</li>
+							<li class="fragment">Sužymėti darbuotojus kaip išėjusius ar ne (1 ar 0)</li>
+							<li class="fragment">Apmokyti logistinę regresiją pagal atributus</li>
+							<li class="fragment">Dabartinio darbuotojo tikimynei išaugus, imtis veiksmų</li>
+						</ol> 
+					</section>
+				</section>
+				<section>
+					<section data-background=#357266>
 						<h2>Dirbtiniai neuroniniai tinklai</h2>
 					</section>
 					<section>
@@ -48,76 +146,53 @@
 						<img class="stretch" src="images/duomenu-modeliavimas/perceptron.png">
 					</section>
 					<section>
-						picture 1
+						<h3>Aktyvacijos funkcijos</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/activation.png">
 					</section>
 					<section>
-						picture 2
+						<h3>Gilus neuroninis tinklas</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/deep.jpg">
 					</section>
 					<section>
-						Artificial neuron (perceptron)
+						<h3>Aktyvacijos funkcijos 2</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/activation2.png">
 					</section>
 					<section>
-						Activation functions
+						<h3>Backpropagation</h3>
+						<iframe class="stretch" src="https://www.youtube.com/embed/q555kfIFUCM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
 					<section>
-						Multi layered perseptrons
+						<h3>Konvoliuciniai neuroniniai tinklai</h3>
+						<iframe class="stretch" src="https://www.youtube.com/embed/FmpDIaiMIeA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
 					<section>
-						Neural video 1
-					</section>
-					<section>
-						Neural video 2
-					</section>
-					<section>
-						Artificial neural networks blue
-					</section>
-					<section>
-						Deep learning blue
-					</section>
-					<section>
-						Style transfer
-					</section>
-					<section>
+						<h3>Neuroninių tinklų tipai</h3>
 						<img class="stretch" src="images/duomenu-modeliavimas/nets.png">						
 					</section>
+
 					<section>
+						<h3>Neuroninių tinklų taikymas: <i>Enhance</i></h3>
 						<img class="stretch" src="images/duomenu-modeliavimas/auto-encoder.jpg">						
 					</section>
 					<section>
-						Robotics
+						<h3>Neuroninių tinklų taikymas: stilių perkėlimas</h3>
+						<img class="stretch" src="images/duomenu-modeliavimas/style.png">	
+					</section>
+
+				</section>
+				<section>
+					<section data-background=#E0F2E9>
+						<h2>Procesas</h2>
 					</section>
 					<section>
-						Optimize user experience
+						<h3>CRISP-DM</h3>
+						<img class="stretch" src="images/crisp.png">
+					</section>
+					<section>
+						<h3>Steps of machine learning</h3>
+						<iframe class="stretch" src="https://youtube.com/embed/nKW8Ndu7Mjw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 					</section>
 				</section>
-
-				<section>
-					neural networks
-				</section>
-				<section>
-					crisp
-				</section>
-				<section>
-					CRISP-DM
-					<img src="images/crisp.png">
-				</section>
-				<section>
-					<h3>Steps of machine learning</h3>
-					<iframe class="stretch" src="https://youtube.com/embed/nKW8Ndu7Mjw"></iframe>
- 
-				</section>
-				<section>
-					scikit
-					<img src="images/scikit.png">
-				</section>
-				<section>
-					azuremlcheat
-					<img src="images/azureml.PNG">
-				</section>
-				<section>
-					crisp
-				</section>
-
 			</div>
 		</div>
 
